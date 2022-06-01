@@ -1,0 +1,23 @@
+.text-field {
+
+  &__input {
+    width: 100%;
+    padding: 12px 13px;
+    font-size: 1rem;
+    border: 1px solid $ds25;
+    border-radius: 4px;
+    outline: none;
+
+    &::placeholder {
+      color: $ds25;
+    }
+
+    &:hover {
+      border: 1px solid $ds50;
+    }
+
+    &:focus {
+      border: 1px solid $ds50;
+    }
+  }
+}

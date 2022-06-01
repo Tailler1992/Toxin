@@ -1,0 +1,9 @@
+mixin text-field(options)
+  .text-field
+    input.text-field__input&attributes(attributes)(
+      type=options.type,
+      name=options.name,
+      placeholder=options.placeholder,
+      value = options.value,
+      data = options.data
+      )
