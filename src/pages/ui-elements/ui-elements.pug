@@ -8,9 +8,16 @@ html(lang="ru")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title ui-elements
   body
-    +text-field({
-      type: "email",
-      name: "email-field",
-      placeholder: "Email",
-      value: ""
-      })
+    .ui-elements
+      .ui-elements__logo
+    main.ui-elements__container
+      section.ui-elements__top
+        .ui-elements__top-column
+          +text-field({
+            type: "email",
+            name: "email-field",
+            placeholder: "Email",
+            value: ""
+            })
+        .ui-elements__top-column
+        .ui-elements__top-column

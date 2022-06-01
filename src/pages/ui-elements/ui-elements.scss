@@ -1,2 +1,25 @@
 @import '../../scss/_var-color';
 @import '../../components/text-field/text-field';
+
+html {
+  background-color: #FFF;
+}
+
+.ui-elements {
+  &__logo {
+  }
+
+  &__container {
+    max-width: 1158px;
+    margin: 0 auto;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+
+    &-column {
+      flex: 0 0 320px;
+    }
+  }
+}
