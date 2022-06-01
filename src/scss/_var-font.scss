@@ -1,0 +1,37 @@
+$ff: 'Montserrat', 'Arial', sans-serif;
+$fs: 14px;
+$lh: calc(24 / 14);
+
+@function -calc-rem($size) {
+  @return calc($size / $fs) * 1rem;
+}
+
+@mixin html {
+  font-family: $ff;
+  font-size: $fs;
+  font-weight: 400;
+  line-height: $lh;
+  color: $ds75;
+}
+
+@mixin h1 {
+  font-size: -calc-rem(24px);
+  font-weight: 700;
+  line-height: calc(29 / 24);
+  color: $ds100;
+}
+
+@mixin h2 {
+  font-size: -calc-rem(19px);
+  font-weight: 700;
+  line-height: calc(23 / 19);
+  color: $ds100;
+}
+
+@mixin h3 {
+  font-size: -calc-rem(12px);
+  font-weight: 700;
+  line-height: calc(15 / 12);
+  color: $ds100;
+  text-transform: uppercase;
+}

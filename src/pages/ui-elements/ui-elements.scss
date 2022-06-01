@@ -1,10 +1,13 @@
 @import '../../scss/_fonts';
 @import '../../scss/_nullstyle';
 @import '../../scss/_var-color';
+@import '../../scss/_var-font';
 
 @import '../../components/text-field/text-field';
 
 html {
+  @include html;
+
   background-color: #FFF;
 }
 
