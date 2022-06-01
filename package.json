@@ -1,0 +1,11 @@
+{
+  "name": "toxin",
+  "version": "1.0.0",
+  "description": "the second task is the practice of layout in the company 'metalamp'",
+  "private": true,
+  "scripts": {
+    
+  },
+  "author": "Aleksandr Peretertov",
+  "license": "ISC"
+}
