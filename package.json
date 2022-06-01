@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "the second task is the practice of layout in the company 'metalamp'",
   "private": true,
-  "scripts": {
-    
-  },
+  "scripts": {},
   "author": "Aleksandr Peretertov",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.1"
+  }
 }
