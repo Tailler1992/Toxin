@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('@fm/montserrat-v24-latin-ext_cyrillic-ext-regular.woff2') format('woff2'),
+    url('@fm/montserrat-v24-latin-ext_cyrillic-ext-regular.woff') format('woff'),
+    url('@fm/montserrat-v24-latin-ext_cyrillic-ext-regular.ttf') format('truetype'),
+    url('@fm/montserrat-v24-latin-ext_cyrillic-ext-regular.svg#Montserrat') format('svg');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url('@fm/montserrat-v24-latin-ext_cyrillic-ext-700.woff2') format('woff2'),
+    url('@fm/montserrat-v24-latin-ext_cyrillic-ext-700.woff') format('woff'),
+    url('@fm/montserrat-v24-latin-ext_cyrillic-ext-700.ttf') format('truetype'),
+    url('@fm/montserrat-v24-latin-ext_cyrillic-ext-700.svg#Montserrat') format('svg');
+}
