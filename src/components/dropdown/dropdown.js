@@ -14,6 +14,14 @@ export default class Dropdown {
   }
 
   init() {
+    this.countersSelector.forEach((count, i) => {
+      this.totalAmount += +count.textContent;
+
+      this.changeStateBtns(count);
+    });
+
+    this.calcAmount();
+
     this.mainContainer.addEventListener('click', (e) => {
       if (e.target === this.inputBtn) {
         this.toggleForm();
@@ -31,6 +39,8 @@ export default class Dropdown {
         if (target.hasAttribute('data-plus')) {
           this.calcPlus(valueElem);
         }
+
+        this.changeStateBtns(valueElem);
       });
     });
 
@@ -66,6 +76,14 @@ export default class Dropdown {
     this.blindSelector.classList.toggle('dropdown__blind_active');
   }
 
+  changeStateBtns(counter) {
+    if (counter.textContent > 0) {
+      counter.previousSibling.classList.remove('dropdown__btn_disabled');
+    }
+    if (counter.textContent < 1) {
+      counter.previousSibling.classList.add('dropdown__btn_disabled');
+    }
+  }
 
 
 
