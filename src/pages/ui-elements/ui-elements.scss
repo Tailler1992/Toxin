@@ -14,12 +14,15 @@ html {
 }
 
 .ui-elements {
-  &__logo {
-  }
+  &__logo {}
 
   &__container {
     max-width: 1158px;
     margin: 0 auto;
+  }
+
+  &__title {
+    margin-bottom: 5px;
   }
 
   &__top {
@@ -31,7 +34,13 @@ html {
     }
   }
 
-  &__title{
-    margin-bottom: 5px;
+  &__text-def {
+    margin-bottom: 20px;
   }
+
+  &__text-hov {
+    margin-bottom: 20px;
+  }
+
+
 }
