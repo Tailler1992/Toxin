@@ -3,7 +3,7 @@
 @import '../../scss/_var-color';
 @import '../../scss/_var-font';
 
-
+@import '../../components/logo/logo';
 @import '../../components/heading/heading';
 @import '../../components/text-field/text-field';
 
@@ -14,7 +14,10 @@ html {
 }
 
 .ui-elements {
-  &__logo {}
+  &__logo {
+    max-width: 1380px;
+    margin: 30px auto 63px;
+  }
 
   &__container {
     max-width: 1158px;

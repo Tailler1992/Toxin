@@ -1,3 +1,4 @@
+include ../../components/logo/logo
 include ../../components/heading/heading
 include ../../components/text-field/text-field
 
@@ -11,33 +12,34 @@ html(lang="ru")
   body
     .ui-elements
       .ui-elements__logo
-    main.ui-elements__container
-      section.ui-elements__top
-        .ui-elements__top-column
-          .ui-elements__text-def
-            +heading({
-              title: 'Text Field',
-              descr: 'Default'
-            }).ui-elements__title
-            +text-field({
-              type: "email",
-              name: "email-field",
-              placeholder: "Email",
-              value: ""
-            })
-          .ui-elements__text-hov
-            +heading({
-              title: 'Text Field',
-              descr: 'Hover / Focus'
-            }).ui-elements__title
-            +text-field({
-              type: "text",
-              name: "text-field",
-              placeholder: "This is pretty awesome",
-              value: "This is pretty awesome"
-            }).text-field__input_active
+        +logo()
+      main.ui-elements__container
+        section.ui-elements__top
+          .ui-elements__top-column
+            .ui-elements__text-def
+              +heading({
+                title: 'Text Field',
+                descr: 'Default'
+              }).ui-elements__title
+              +text-field({
+                type: "email",
+                name: "email-field",
+                placeholder: "Email",
+                value: ""
+              })
+            .ui-elements__text-hov
+              +heading({
+                title: 'Text Field',
+                descr: 'Hover / Focus'
+              }).ui-elements__title
+              +text-field({
+                type: "text",
+                name: "text-field",
+                placeholder: "This is pretty awesome",
+                value: "This is pretty awesome"
+              }).text-field__input_active
 
 
 
-        .ui-elements__top-column
-        .ui-elements__top-column
+          .ui-elements__top-column
+          .ui-elements__top-column
