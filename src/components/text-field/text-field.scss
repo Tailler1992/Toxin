@@ -13,6 +13,12 @@
       border: 1px solid $ds50;
     }
 
+    &_boxy {
+      border: 1px solid $ds50;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
     &::placeholder {
       color: $ds25;
     }
