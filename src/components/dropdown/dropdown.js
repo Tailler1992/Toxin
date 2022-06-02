@@ -42,8 +42,6 @@ export default class Dropdown {
         }
 
         this.changeStateBtns(valueElem);
-
-        console.log(this.multipleElem);
       });
     });
 
@@ -66,11 +64,28 @@ export default class Dropdown {
     this.calcAmount();
   }
 
+  changeEnding(number, textForms) {
+    number = Math.abs(number) % 100;
+
+    if (number > 10 && number < 20) {
+        return textForms[2];
+    }
+    if ((number % 10 > 1) && (number % 10 < 5)) {
+        return textForms[1];
+    }
+    if (number % 10 == 1) {
+        return textForms[0];
+    }
+    return textForms[2];
+}
+
   calcAmount() {
+    const word = this.changeEnding(this.totalAmount, ['элемент', 'элемента', 'элементов']);
+
     if (this.totalAmount === 0) {
       this.input.setAttribute('value', 'Укажите количество');
     } else {
-      this.input.setAttribute('value', `${this.totalAmount}`);
+      this.input.setAttribute('value', `${this.totalAmount}  ${word}`);
     }
   }
 
