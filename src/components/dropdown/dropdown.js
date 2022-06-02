@@ -68,16 +68,16 @@ export default class Dropdown {
     number = Math.abs(number) % 100;
 
     if (number > 10 && number < 20) {
-        return textForms[2];
+      return textForms[2];
     }
     if ((number % 10 > 1) && (number % 10 < 5)) {
-        return textForms[1];
+      return textForms[1];
     }
     if (number % 10 == 1) {
-        return textForms[0];
+      return textForms[0];
     }
     return textForms[2];
-}
+  }
 
   calcAmount() {
     const word = this.changeEnding(this.totalAmount, ['элемент', 'элемента', 'элементов']);
@@ -104,9 +104,38 @@ export default class Dropdown {
       counter.previousSibling.classList.add('dropdown__btn_disabled');
     }
   }
+}
 
+export class DropdownRooms extends Dropdown { }
 
+export class DropdownGuests extends Dropdown {
+  constructor(mainContainerBox) {
+    super(mainContainerBox);
+    this.words = [
+      ['гость', 'гостя', 'гостей'],
+      ['младенец', 'младенца', 'младенцев']
+    ];
+  }
 
+  calcAmount() {
+    if (this.totalAmount === 0) {
+      this.input.setAttribute('value', 'Сколько гостей');
+    } else {
+      this.input.setAttribute('value', this.chooseWord());
+    }
+  }
 
+  chooseWord() {
+    const [adult, kid, baby] = this.multipleElem;
+    const content = [adult + kid, baby];
+    let arr = [];
 
+    content.forEach((item, i) => {
+      if (item) {
+        arr.push(`${item} ${this.changeEnding(item, this.words[i])}`);
+      }
+    });
+
+    return arr.join(', ');
+  }
 }
