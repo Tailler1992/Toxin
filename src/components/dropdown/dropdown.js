@@ -26,19 +26,29 @@ export default class Dropdown {
         const valueElem = item.querySelector('.dropdown__count');
 
         if (target.hasAttribute('data-minus')) {
-          valueElem.textContent--;
-          this.totalAmount--;
-          this.calcAmount();
+          this.calcMinus(valueElem);
         }
         if (target.hasAttribute('data-plus')) {
-          valueElem.textContent++;
-          this.totalAmount++;
-          this.calcAmount();
+          this.calcPlus(valueElem);
         }
       });
     });
 
 
+  }
+
+  calcMinus(valueElem) {
+    if (valueElem.textContent > 0) {
+      valueElem.textContent--;
+      this.totalAmount--;
+      this.calcAmount();
+    }
+  }
+
+  calcPlus(valueElem) {
+    valueElem.textContent++;
+    this.totalAmount++;
+    this.calcAmount();
   }
 
   calcAmount() {
