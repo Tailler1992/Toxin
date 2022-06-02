@@ -3,6 +3,8 @@
 @import '../../scss/_var-color';
 @import '../../scss/_var-font';
 
+
+@import '../../components/heading/heading';
 @import '../../components/text-field/text-field';
 
 html {
@@ -27,5 +29,9 @@ html {
     &-column {
       flex: 0 0 320px;
     }
+  }
+
+  &__title{
+    margin-bottom: 5px;
   }
 }
