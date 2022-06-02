@@ -10,7 +10,43 @@ export default class Dropdown {
     this.controlsSelector = this.blindSelector.querySelectorAll('.dropdown__control');
     this.countersSelector = this.blindSelector.querySelectorAll('.dropdown__count');
     this.totalAmount = 0;
-    this.toggleForm();
+    this.init();
+  }
+
+  init() {
+    this.mainContainer.addEventListener('click', (e) => {
+      if (e.target === this.inputBtn) {
+        this.toggleForm();
+      }
+    });
+
+    this.controlsSelector.forEach((item, i) => {
+      item.addEventListener('click', (e) => {
+        const target = e.target;
+        const valueElem = item.querySelector('.dropdown__count');
+
+        if (target.hasAttribute('data-minus')) {
+          valueElem.textContent--;
+          this.totalAmount--;
+          this.calcAmount();
+        }
+        if (target.hasAttribute('data-plus')) {
+          valueElem.textContent++;
+          this.totalAmount++;
+          this.calcAmount();
+        }
+      });
+    });
+
+
+  }
+
+  calcAmount() {
+    if (this.totalAmount === 0) {
+      this.input.setAttribute('value', 'Укажите количество');
+    } else {
+      this.input.setAttribute('value', `${this.totalAmount}`);
+    }
   }
 
   toggleForm() {
