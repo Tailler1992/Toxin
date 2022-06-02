@@ -1,6 +1,7 @@
 include ../../components/logo/logo
 include ../../components/heading/heading
 include ../../components/text-field/text-field
+include ../../components/dropdown/dropdown
 
 doctype html
 html(lang='ru')
@@ -42,12 +43,12 @@ html(lang='ru')
               +heading({
                 title: 'Dropdown'
               }).ui-elements__title
-              +text-field({
-                type: 'text',
-                name: 'dropdown-text',
-                placeholder: 'Сколько гостей',
-                btnMore: true
-              })
+              +dropdown([
+                {title: "взрослые", count: 0},
+                {title: "дети", count: 0},
+                {title: "младенцы", count: 0},
+              ])
+
             .ui-elements__subs
               +heading({
                 title: 'subscription text field'

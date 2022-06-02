@@ -9,6 +9,7 @@ $material-icons-font-path: '~material-icons/iconfont/';
 @import '../../components/logo/logo';
 @import '../../components/heading/heading';
 @import '../../components/text-field/text-field';
+@import '../../components/dropdown/dropdown';
 
 html {
   @include html;
@@ -46,6 +47,11 @@ html {
 
   &__text-hov {
     margin-bottom: 20px;
+  }
+
+
+  &__subs{
+    max-width: 267px;
   }
 
 
