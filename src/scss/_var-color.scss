@@ -6,3 +6,15 @@ $ds25: #1F204140;
 $ds5: #1F204115;
 $purple: #BC9CFF;
 $green: #6FCF97;
+
+// Основной градиент
+$main-gr100: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$main-gr75: linear-gradient(180deg, #BB9CFFBF 0%, #8BA4F9BF 100%);
+$main-gr50: linear-gradient(180deg, #BB9CFF80 0%, #8BA4F980 100%);
+$main-gr25: linear-gradient(180deg, #BB9CFF40 0%, #8BA4F940 100%);
+$main-gr5: linear-gradient(180deg, #BB9CFF15 0%, #8BA4F915 100%);
+
+// Дополнительный градиент
+$secondary-gr100: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+$secondary-gr75: linear-gradient(180deg, #6FCF97BF 0%, #66D2EABF 100%);
+$secondary-gr50: linear-gradient(180deg, #6FCF9780 0%, #66D2EA80 100%);
