@@ -106,7 +106,39 @@ export default class Dropdown {
   }
 }
 
-export class DropdownRooms extends Dropdown { }
+export class DropdownRooms extends Dropdown {
+  constructor(mainContainer) {
+    super(mainContainer);
+
+    this.words = [
+      ['спальня', 'спальни', 'спальней'],
+      ['кровать', 'кровати', 'кроватей'],
+      ['ванная комната', 'ванные комнаты', 'ванных комнат']
+    ];
+  }
+
+  calcAmount() {
+    if (this.totalAmount === 0) {
+      this.input.setAttribute('value', 'Выберите удобства');
+    } else {
+      this.input.setAttribute('value', this.chooseWord());
+    }
+  }
+
+  chooseWord() {
+    let arr = [];
+
+    this.multipleElem.forEach((item, i) => {
+      if (item) {
+        arr.push(`${item} ${this.changeEnding(item, this.words[i])}`);
+      }
+    });
+
+    let text = arr.join(', ');
+
+    return text.length > 19 ? `${text.substr(0, 20).trim()}...` : text;
+  }
+}
 
 export class DropdownGuests extends Dropdown {
   constructor(mainContainerBox) {

@@ -6,5 +6,5 @@ import {default as Dropdown, DropdownRooms, DropdownGuests} from '../../componen
 window.addEventListener('DOMContentLoaded', () => {
   new Dropdown({container: '.ui-elements__guests-drop'});
   new DropdownGuests({container: '.ui-elements__guests-test'});
-  new DropdownGuests({container: '.ui-elements__guests-test2'});
+  new DropdownRooms({container: '.ui-elements__guests-test2'});
 });
