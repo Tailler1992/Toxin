@@ -10,13 +10,14 @@ export default class Dropdown {
     this.controlsSelector = this.blindSelector.querySelectorAll('.dropdown__control');
     this.countersSelector = this.blindSelector.querySelectorAll('.dropdown__count');
     this.totalAmount = 0;
+    this.multipleElem = [];
     this.init();
   }
 
   init() {
     this.countersSelector.forEach((count, i) => {
       this.totalAmount += +count.textContent;
-
+      this.multipleElem[i] = +count.textContent;
       this.changeStateBtns(count);
     });
 
@@ -34,30 +35,34 @@ export default class Dropdown {
         const valueElem = item.querySelector('.dropdown__count');
 
         if (target.hasAttribute('data-minus')) {
-          this.calcMinus(valueElem);
+          this.calcMinus(valueElem, i);
         }
         if (target.hasAttribute('data-plus')) {
-          this.calcPlus(valueElem);
+          this.calcPlus(valueElem, i);
         }
 
         this.changeStateBtns(valueElem);
+
+        console.log(this.multipleElem);
       });
     });
 
 
   }
 
-  calcMinus(valueElem) {
+  calcMinus(valueElem, i) {
     if (valueElem.textContent > 0) {
       valueElem.textContent--;
       this.totalAmount--;
+      this.multipleElem[i] = +valueElem.textContent;
       this.calcAmount();
     }
   }
 
-  calcPlus(valueElem) {
+  calcPlus(valueElem, i) {
     valueElem.textContent++;
     this.totalAmount++;
+    this.multipleElem[i] = +valueElem.textContent;
     this.calcAmount();
   }
 
