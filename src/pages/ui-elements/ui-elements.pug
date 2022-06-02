@@ -38,13 +38,25 @@ html(lang='ru')
                 placeholder: 'This is pretty awesome',
                 value: 'This is pretty awesome'
               }).text-field__input_active
-
+            .ui-elements__guests-drop
+              +heading({
+                title: 'Dropdown'
+              }).ui-elements__title
+              +text-field({
+                type: 'text',
+                name: 'dropdown-text',
+                placeholder: 'Сколько гостей',
+                btnMore: true
+              })
             .ui-elements__subs
-               +heading({
+              +heading({
                 title: 'subscription text field'
               }).ui-elements__title
-
-
-
+              +text-field({
+                type: 'email',
+                name: 'subscription',
+                placeholder: 'Email',
+                btnForward: true
+              })
           .ui-elements__top-column
           .ui-elements__top-column
