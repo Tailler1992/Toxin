@@ -5,6 +5,7 @@ include ../../components/dropdown/dropdown
 
 include ../../components/checkbox/checkbox
 include ../../components/radio/radio
+include ../../components/toggle/toggle
 
 doctype html
 html(lang='ru')
@@ -94,4 +95,14 @@ html(lang='ru')
               {text: "Мужчина", checked: true},
               {text: "Женщина", checked: false}
               ])
+
+            +heading({
+              title: 'Toggle'
+              })
+            +toggle([
+                {text: "Получать спецпредложения", checked: true},
+                {text: "Получать спецпредложения", checked: false}
+              ])
+
+
           .ui-elements__top-column
