@@ -1,0 +1,7 @@
+mixin toggle(content)
+  .toggle
+    each item in content
+      label.toggle__label
+        input.toggle__input(type='checkbox', checked=item.checked)
+        .toggle__checkmark
+        .toggle__text=item.text
