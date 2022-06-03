@@ -4,6 +4,7 @@ include ../../components/text-field/text-field
 include ../../components/dropdown/dropdown
 
 include ../../components/checkbox/checkbox
+include ../../components/radio/radio
 
 doctype html
 html(lang='ru')
@@ -62,7 +63,7 @@ html(lang='ru')
                 {title: "спальни", count: 0},
                 {title: "кровати", count: 0},
                 {title: "ванные комнаты", count: 0},
-              ])
+                ])
 
             .ui-elements__subs
               +heading({
@@ -73,14 +74,23 @@ html(lang='ru')
                 name: 'subscription',
                 placeholder: 'Email',
                 btnForward: true
-              })
+                })
           .ui-elements__top-column
             +heading({
-                title: 'Checkbox Buttons'
-            })
+              title: 'Checkbox Buttons'
+              })
             +checkbox([
               {text: "Можно курить", checked: false},
               {text: "Можно с питомцами", checked: true},
               {text: "Можно пригласить гостей <br> (до 10 человек)", checked: true}
-            ])
+              ])
+
+
+            +heading({
+              title: 'Radio Buttons'
+              })
+            +radio([
+              {text: "Мужчина", checked: true},
+              {text: "Женщина", checked: false}
+              ])
           .ui-elements__top-column
