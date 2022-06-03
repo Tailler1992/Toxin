@@ -76,14 +76,15 @@ html(lang='ru')
                 btnForward: true
                 })
           .ui-elements__top-column
-            +heading({
-              title: 'Checkbox Buttons'
-              })
-            +checkbox([
-              {text: "Можно курить", checked: false},
-              {text: "Можно с питомцами", checked: true},
-              {text: "Можно пригласить гостей <br> (до 10 человек)", checked: true}
-              ])
+            .control-top__check-btn
+              +heading({
+                title: 'Checkbox Buttons'
+                })
+              +checkbox([
+                {text: "Можно курить", checked: false},
+                {text: "Можно с питомцами", checked: true},
+                {text: "Можно пригласить гостей <br> (до 10 человек)", checked: true}
+                ])
 
 
             +heading({
