@@ -11,6 +11,8 @@ $material-icons-font-path: '~material-icons/iconfont/';
 @import '../../components/text-field/text-field';
 @import '../../components/dropdown/dropdown';
 
+@import '../../components/checkbox/checkbox';
+
 html {
   @include html;
 
