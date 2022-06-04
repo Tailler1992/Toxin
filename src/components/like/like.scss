@@ -1,0 +1,32 @@
+.like {
+  width: 40px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  border: 1px solid $ds25;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 10px;
+  color: $ds25;
+
+  &_active {
+    border: 1px solid #BC9CFF;
+    color: $purple;
+  }
+
+  &__heart {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 10px;
+    color: $ds25;
+  }
+
+  &_active > &__heart {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
