@@ -44,28 +44,23 @@ html(lang='ru')
                 value: 'This is pretty awesome'
               }).text-field__input_active
             .ui-elements__guests-drop
-              +heading({
-                title: 'Dropdown'
-              }).ui-elements__title
+              +heading({title: 'Dropdown'}).ui-elements__title
               +dropdown([
                 {title: "взрослые", count: 0},
                 {title: "дети", count: 0},
                 {title: "младенцы", count: 0},
               ])
-
-            .ui-elements__guests-test
-              +dropdown([
-                {title: "взрослые", count: 0},
-                {title: "дети", count: 0},
-                {title: "младенцы", count: 0},
-              ])
-            .ui-elements__guests-test2
-              +dropdown([
-                {title: "спальни", count: 0},
-                {title: "кровати", count: 0},
-                {title: "ванные комнаты", count: 0},
-                ])
-
+            .ui-elements__text-mask
+              +heading({title: 'masked text field'}).ui-elements__title
+              +text-field({
+                type: 'text',
+                name: 'masked-field',
+                placeholder: 'ДД.ММ.ГГГГ',
+                value: ''
+              })
+            .ui-elements__date-drop
+            .ui-elementst__filter-date-drop
+              +heading({title: 'filter date dropdown'}).ui-elements__title
             .ui-elements__subs
               +heading({
                 title: 'subscription text field'
@@ -75,34 +70,29 @@ html(lang='ru')
                 name: 'subscription',
                 placeholder: 'Email',
                 btnForward: true
-                })
+              })
+
           .ui-elements__top-column
-            .control-top__check-btn
-              +heading({
-                title: 'Checkbox Buttons'
-                })
+            .ui-elements__check-btn
+              +heading({title: 'Checkbox Buttons'}).ui-elements__title-centr
               +checkbox([
                 {text: "Можно курить", checked: false},
                 {text: "Можно с питомцами", checked: true},
                 {text: "Можно пригласить гостей <br> (до 10 человек)", checked: true}
-                ])
-
-
-            +heading({
-              title: 'Radio Buttons'
-              })
-            +radio([
-              {text: "Мужчина", checked: true},
-              {text: "Женщина", checked: false}
               ])
-
-            +heading({
-              title: 'Toggle'
-              })
-            +toggle([
+            .ui-elements__radio
+              +heading({title: 'Radio Buttons'}).ui-elements__title-centr
+              +radio([
+                {text: "Мужчина", checked: true},
+                {text: "Женщина", checked: false}
+              ])
+            .ui-elements__toggle
+              +heading({title: 'Toggle'}).ui-elements__title-centr
+              +toggle([
                 {text: "Получать спецпредложения", checked: true},
                 {text: "Получать спецпредложения", checked: false}
               ])
-
+            .ui-elements__like
+              +heading({title: 'like button'}).ui-elements__title-centr
 
           .ui-elements__top-column
