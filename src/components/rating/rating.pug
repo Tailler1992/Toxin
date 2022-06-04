@@ -1,0 +1,14 @@
+mixin rating(rank)
+
+  - let star = 1;
+
+  .rating&attributes(attributes)
+    while star < 6
+      if star < rank
+        .rating__star.rating__star_active.material-icons(data-rate=`${star}`) star
+      else if star === rank
+        .rating__star.rating__star_active.rating__star-select.material-icons(data-rate=`${star}`) star
+      else
+        .rating__star.material-icons(data-rate=`${star}`) star_border
+
+      - star++
