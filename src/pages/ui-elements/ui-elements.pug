@@ -6,6 +6,7 @@ include ../../components/dropdown/dropdown
 include ../../components/checkbox/checkbox
 include ../../components/radio/radio
 include ../../components/toggle/toggle
+include ../../components/like/like
 
 doctype html
 html(lang='ru')
@@ -94,5 +95,13 @@ html(lang='ru')
               ])
             .ui-elements__like
               +heading({title: 'like button'}).ui-elements__title-centr
-
+              .ui-elements__like-conteiner
+                +like({
+                  heart: 'favorite_border',
+                  quantity: 2
+                }).ui-elements__like-left
+                +like({
+                  heart: 'favorite',
+                  quantity: 12
+                }).like_active
           .ui-elements__top-column
