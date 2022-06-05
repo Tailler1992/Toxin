@@ -16,6 +16,9 @@ $material-icons-font-path: '~material-icons/iconfont/';
 @import '../../components/toggle/toggle';
 @import '../../components/like/like';
 
+
+@import '../../components/check-list/check-list';
+
 html {
   @include html;
 
