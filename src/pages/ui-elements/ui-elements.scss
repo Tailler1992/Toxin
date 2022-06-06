@@ -15,6 +15,7 @@ $material-icons-font-path: '~material-icons/iconfont/';
 @import '../../components/radio/radio';
 @import '../../components/toggle/toggle';
 @import '../../components/like/like';
+@import '../../components/rating/rating';
 
 html {
   @include html;
@@ -92,7 +93,7 @@ html {
   }
 
   &__like {
-    margin-bottom: 44px;
+    margin-bottom: 40px;
 
     &-conteiner{
       display: flex;
@@ -100,6 +101,17 @@ html {
 
     &-left{
       margin-right: 10px;
+    }
+  }
+
+  &__rating{
+
+    &-conteiner{
+      display: flex;
+    }
+
+    &-left{
+      margin-right: 20px;
     }
   }
 
