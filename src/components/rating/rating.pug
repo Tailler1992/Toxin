@@ -1,14 +1,12 @@
 mixin rating(rank)
 
-  - let star = 1;
-
-  .rating&attributes(attributes)
-    while star < 6
-      if star < rank
-        .rating__star.rating__star_active.material-icons(data-rate=`${star}`) star
-      else if star === rank
-        .rating__star.rating__star_active.rating__star-select.material-icons(data-rate=`${star}`) star
-      else
-        .rating__star.material-icons(data-rate=`${star}`) star_border
-
-      - star++
+  .rating.rating__set&attributes(attributes)
+    .rating__body
+      .rating__active
+      .rating__stars
+        input.rating__star(type='radio' name='rating' value='1')
+        input.rating__star(type='radio' name='rating' value='2')
+        input.rating__star(type='radio' name='rating' value='3')
+        input.rating__star(type='radio' name='rating' value='4')
+        input.rating__star(type='radio' name='rating' value='5')
+    .rating__value=rank
