@@ -7,6 +7,7 @@ include ../../components/checkbox/checkbox
 include ../../components/radio/radio
 include ../../components/toggle/toggle
 include ../../components/like/like
+include ../../components/rating/rating
 
 include ../../components/check-list/check-list
 
@@ -106,9 +107,11 @@ html(lang='ru')
                   heart: 'favorite',
                   quantity: 12
                 }).like_active
-            .ui-elements____rating
+            .ui-elements__rating
               +heading({title: 'rate button'}).ui-elements__title-centr
-
+              .ui-elements__rating-conteiner
+                +rating(4).ui-elements__rating-left
+                +rating(5)
           .ui-elements__top-column
         section.ui-elements__dropdown
 
