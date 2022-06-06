@@ -27,6 +27,7 @@
     "webpack-dev-server": "^4.9.1"
   },
   "dependencies": {
-    "material-icons": "^1.11.1"
+    "material-icons": "^1.11.1",
+    "nouislider": "^15.6.0"
   }
 }

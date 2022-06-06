@@ -8,6 +8,7 @@ include ../../components/radio/radio
 include ../../components/toggle/toggle
 include ../../components/like/like
 include ../../components/rating/rating
+include ../../components/slider/slider
 
 include ../../components/check-list/check-list
 
@@ -112,7 +113,14 @@ html(lang='ru')
               .ui-elements__rating-conteiner
                 +rating(4).ui-elements__rating-left
                 +rating(5)
+
           .ui-elements__top-column
+            .ui-elements__slider
+              +slider({
+                title: "Range Slider",
+                price: "5 000₽ - 10 000₽"
+              })
+
         section.ui-elements__dropdown
 
 
