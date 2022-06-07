@@ -9,6 +9,7 @@ include ../../components/toggle/toggle
 include ../../components/like/like
 include ../../components/rating/rating
 include ../../components/slider/slider
+include ../../components/btn/btn
 
 include ../../components/check-list/check-list
 
@@ -120,7 +121,46 @@ html(lang='ru')
                 title: "Range Slider",
                 price: "5 000₽ - 10 000₽"
               })
-
+            .ui-elements__btn
+              +heading({title: 'buttons'}).ui-elements__title-right
+              .ui-elements__btn-row
+                +btn({
+                  type: 'link',
+                  href: '#',
+                  title: 'CLICK ME'
+                }).ui-elements__btn-link-left
+                +btn({
+                  type: 'link',
+                  href: '#',
+                  title: 'CLICK ME'
+                }).btn_theme-hover
+              .ui-elements__btn-row
+                +btn({
+                  type: 'link',
+                  href: '#',
+                  title: 'CLICK ME'
+                }).btn_theme-hollow.ui-elements__btn-link-left
+                +btn({
+                  type: 'link',
+                  href: '#',
+                  title: 'CLICK ME'
+                }).btn_theme-hollow.btn_theme-hover
+              .ui-elements__btn-row
+                +btn({
+                  type: 'button',
+                  title: 'CLICK ME'
+                }).btn_theme-no-wrapper.ui-elements__btn-left
+                +btn({
+                  type: 'button',
+                  title: 'CLICK ME'
+                }).btn_theme-no-wrapper.btn_theme-hover-no-wrapper
+              .ui-elements__btn-row
+                +btn({
+                  type: 'button',
+                  title: 'перейти к оплате'
+                }).btn_theme-long
+            .ui-elements__pagination
+              +heading({title: 'pagination'}).ui-elements__title-right
         section.ui-elements__dropdown
 
 
