@@ -46,6 +46,7 @@ html {
   &__top {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 100px;
 
     &-column {
       flex: 0 0 320px;
@@ -151,8 +152,16 @@ html {
     }
   }
 
-  &__pagination{
+  // section dropdowns
+  &__dropdowns{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+    &-column {
+      flex: 0 0 320px;
+
+    }
 
   }
-
 }

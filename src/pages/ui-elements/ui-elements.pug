@@ -163,8 +163,28 @@ html(lang='ru')
             .ui-elements__pagination
               +heading({title: 'pagination'}).ui-elements__title-right
               +pagination()
-        section.ui-elements__dropdown
 
+        section.ui-elements__dropdowns
+          .ui-elements__dropdowns-column
+            .ui-elements__drop-room
+              +heading({
+                title: 'dropdown',
+                descr: 'Default'
+              })
+
+            .ui-elements__drop-room-active
+              +heading({
+                title: 'dropdown',
+                descr: 'expanded'
+              })
+
+          .ui-elements__dropdowns-column
+            .ui-elements__drop-guest
+              +heading({title: 'dropdown'})
+
+          .ui-elements__dropdowns-column
+            .ui-elements__drop-guest
+              +heading({title: 'dropdown'})
 
 
         section.ui-elements__list
