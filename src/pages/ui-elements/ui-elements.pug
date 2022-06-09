@@ -170,21 +170,41 @@ html(lang='ru')
               +heading({
                 title: 'dropdown',
                 descr: 'Default'
-              })
+              }).ui-elements__drop-title
+              +dropdown([
+                {title: "спальни", count: 2},
+                {title: "кровати", count: 2},
+                {title: "ванные комнаты", count: 0},
+              ])
 
             .ui-elements__drop-room-active
               +heading({
                 title: 'dropdown',
                 descr: 'expanded'
-              })
+              }).ui-elements__drop-title
+              +dropdown([
+                {title: "спальни", count: 2},
+                {title: "кровати", count: 2},
+                {title: "ванные комнаты", count: 0},
+              ])
 
           .ui-elements__dropdowns-column
             .ui-elements__drop-guest
-              +heading({title: 'dropdown'})
+              +heading({title: 'dropdown'}).ui-elements__drop-title
+              +dropdown([
+                {title: "взрослые", count: 0},
+                {title: "дети", count: 0},
+                {title: "младенцы", count: 0},
+              ])
 
           .ui-elements__dropdowns-column
-            .ui-elements__drop-guest
-              +heading({title: 'dropdown'})
+            .ui-elements__drop-guest-filled
+              +heading({title: 'dropdown'}).ui-elements__drop-title
+              +dropdown([
+                {title: "взрослые", count: 2},
+                {title: "дети", count: 1},
+                {title: "младенцы", count: 0},
+              ])
 
 
         section.ui-elements__list

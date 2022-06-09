@@ -12,6 +12,12 @@ window.addEventListener('DOMContentLoaded', () => {
   rating();
   slider();
   pagination({'currentPage' : 1, 'totalPages': 15});
+
+  new Dropdown({container: '.ui-elements__drop-room'});
+  new Dropdown({container: '.ui-elements__drop-room-active'});
+  new Dropdown({container: '.ui-elements__drop-guest'});
+  new Dropdown({container: '.ui-elements__drop-guest-filled'});
+
   checkList('.ui-elements__checklist', false);
   checkList('.ui-elements__checklist-active', true);
 });
