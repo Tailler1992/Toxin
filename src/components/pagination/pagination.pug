@@ -1,20 +1,7 @@
 mixin pagination()
   .pagination
-    ul.pagination__container
-      li
-        button.pagination__btn.pagination__btn_prev
-      li.pagination__item.pagination__item_current 1
-      li.pagination__item 2
-      li.pagination__item 3
-      li.pagination__item.pagination__dots ...
-      li.pagination__item 5
-      li.pagination__item 6
-      li.pagination__item 7
-      li.pagination__item.pagination__dots ...
-      li.pagination__item 9
-      li
-        button.pagination__btn.pagination__btn_next
-    .pagination__description 1 – 12 из 100+ вариантов аренды
-
-
-//.pagination__number_current
+    .pagination__container
+      button.pagination__btn.pagination__btn_prev
+      ul.pagination__items
+      button.pagination__btn.pagination__btn_next
+    p.pagination__description 1 – 12 из 100+ вариантов аренды

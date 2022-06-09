@@ -2,6 +2,7 @@ import {default as Dropdown, DropdownRooms, DropdownGuests} from '../../componen
 import like from '../../components/like/like';
 import rating from '../../components/rating/rating';
 import slider from '../../components/slider/slider';
+import pagination from '../../components/pagination/pagination';
 import checkList from '../../components/check-list/check-list';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -10,6 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
   like();
   rating();
   slider();
+  pagination({'currentPage' : 1, 'totalPages': 15});
   checkList('.ui-elements__checklist', false);
   checkList('.ui-elements__checklist-active', true);
 });
