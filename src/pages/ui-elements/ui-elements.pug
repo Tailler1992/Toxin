@@ -14,6 +14,7 @@ include ../../components/btn/btn
 include ../../components/pagination/pagination
 
 include ../../components/check-list/check-list
+include ../../components/bullet-list/bullet-list
 
 doctype html
 html(lang='ru')
@@ -71,8 +72,13 @@ html(lang='ru')
                 title: "date Dropdown",
                 title2: "date Dropdown"
               })
-            .ui-elementst__filter-date-drop
+            .ui-elements__filter-date-drop
               +heading({title: 'filter date dropdown'}).ui-elements__title
+              +text-field({
+                type: 'text',
+                name: 'test',
+                placeholder: '19 авг - 23 авг',
+              })
             .ui-elements__subs
               +heading({
                 title: 'subscription text field'
@@ -213,27 +219,34 @@ html(lang='ru')
 
 
         section.ui-elements__list
-          .ui-elements__checklist
-            +check-list(
-              "expandable checkbox list",
-              [
-                {text: "Завтрак", checked: false},
-                {text: "Письменный стол", checked: true},
-                {text: "Стул для кормления", checked: true},
-                {text: "Кроватка", checked: true},
-                {text: "Телевизор", checked: false},
-                {text: "Шампунь", checked: false},
-              ])
-          .ui-elements__checklist-active
-            +check-list(
-              "expandable checkbox list",
-              [
-                {text: "Завтрак", checked: false},
-                {text: "Письменный стол", checked: true},
-                {text: "Стул для кормления", checked: true},
-                {text: "Кроватка", checked: true},
-                {text: "Телевизор", checked: false},
-                {text: "Шампунь", checked: false},
-                {text: "Телевизор", checked: false},
-                {text: "Шампунь", checked: false},
-              ])
+          .ui-elements__list-column
+            .ui-elements__checklist
+              +check-list(
+                "expandable checkbox list",
+                [
+                  {text: "Завтрак", checked: false},
+                  {text: "Письменный стол", checked: true},
+                  {text: "Стул для кормления", checked: true},
+                  {text: "Кроватка", checked: true},
+                  {text: "Телевизор", checked: false},
+                  {text: "Шампунь", checked: false},
+                ])
+            .ui-elements__checklist-active
+              +check-list(
+                "expandable checkbox list",
+                [
+                  {text: "Завтрак", checked: false},
+                  {text: "Письменный стол", checked: true},
+                  {text: "Стул для кормления", checked: true},
+                  {text: "Кроватка", checked: true},
+                  {text: "Телевизор", checked: false},
+                  {text: "Шампунь", checked: false},
+                  {text: "Телевизор", checked: false},
+                  {text: "Шампунь", checked: false},
+                ])
+          .ui-elements__list-column
+
+          .ui-elements__list-column
+            +heading({title: 'bullet list'}).ui-elements__list-title
+            +bullet-list()
+        section.ui-elements__footer
