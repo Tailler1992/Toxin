@@ -3,7 +3,7 @@
   position: relative;
 
   &__column {
-    &:not(:last-child) {
+    &:first-child {
       margin-right: 20px;
     }
   }
@@ -12,13 +12,5 @@
     margin-bottom: 5.44px;
   }
 
-  &__air{
-    position: absolute !important;
-    top: 80px;
-    display: none;
 
-    &_active {
-        display: block;
-    }
-}
 }
