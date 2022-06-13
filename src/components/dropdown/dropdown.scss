@@ -57,4 +57,11 @@
     font-weight: 700;
     color: $ds100;
   }
+
+  &__text-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 19px;
+    margin-bottom: 6px;
+}
 }

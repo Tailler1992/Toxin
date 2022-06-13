@@ -3,4 +3,4 @@ mixin btn(options)
     when "link"
       a.btn&attributes(attributes)(href=options.href)= options.title
     when "button"
-      button.btn&attributes(attributes)()= options.title
+      button.btn&attributes(attributes)(data-option=options.data)= options.title
