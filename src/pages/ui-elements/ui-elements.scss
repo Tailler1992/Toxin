@@ -198,9 +198,18 @@ html {
 
     &-column {
       flex: 0 0 320px;
+
+      &:nth-child(2){
+        margin-left: 55px;
+      }
     }
 
-    &-title {
+    &-title{
+      margin-top: 15px;
+      margin-bottom: 17px;
+    }
+
+    &-title-right {
       margin-top: 15px;
       margin-bottom: 13px;
     }

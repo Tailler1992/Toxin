@@ -245,8 +245,19 @@ html(lang='ru')
                   {text: "Шампунь", checked: false},
                 ])
           .ui-elements__list-column
-
+            +heading({title: 'rich Checkbox Buttons'}).ui-elements__list-title
+            +checkbox([
+              {
+                title: "Широкий коридор",
+                checked: false,
+                description: "Ширина коридоров в номере <br> не менее 91 см."
+              },
+              {
+                title: "Помощник для инвалидов",
+                checked: false,
+                description: "На 1 этаже вас встретит специалист <br> и проводит до номера."},
+            ])
           .ui-elements__list-column
-            +heading({title: 'bullet list'}).ui-elements__list-title
+            +heading({title: 'bullet list'}).ui-elements__list-title-right
             +bullet-list()
         section.ui-elements__footer
