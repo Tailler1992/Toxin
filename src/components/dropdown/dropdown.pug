@@ -1,4 +1,4 @@
-mixin dropdown(content)
+mixin dropdown(content, isBtn)
   .dropdown
     +text-field({
       type: 'text',
@@ -14,3 +14,15 @@ mixin dropdown(content)
             button.dropdown__btn(data-minus) -
             span.dropdown__count=item.count
             button.dropdown__btn(data-plus) +
+      if isBtn
+        .dropdown__text-btns
+          +btn({
+            type: 'button',
+            title: 'очистить',
+            data: 'clear'
+          }).btn_theme-no-wrapper
+          +btn({
+            type: 'button',
+            title: 'применить',
+            data: 'apply'
+          }).btn_theme-no-wrapper
