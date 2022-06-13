@@ -1,4 +1,5 @@
 import {default as Dropdown, DropdownRooms, DropdownGuests} from '../../components/dropdown/dropdown';
+import dataDrop from '../../components/date-dropdown/date-dropdown';
 import like from '../../components/like/like';
 import rating from '../../components/rating/rating';
 import slider from '../../components/slider/slider';
@@ -7,7 +8,7 @@ import checkList from '../../components/check-list/check-list';
 
 window.addEventListener('DOMContentLoaded', () => {
   new DropdownGuests({container: '.ui-elements__guests-drop'}).init();
-
+  dataDrop('.date-dropdown');
   like();
   rating();
   slider();
