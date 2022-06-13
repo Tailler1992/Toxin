@@ -1,6 +1,8 @@
 export default class Dropdown {
   constructor({
-    container
+    container,
+    isActive,
+    closingClick
   }) {
     this.mainContainer = document.querySelector(container);
     this.dropdown = this.mainContainer.querySelector('.dropdown');
@@ -11,7 +13,8 @@ export default class Dropdown {
     this.countersSelector = this.blindSelector.querySelectorAll('.dropdown__count');
     this.totalAmount = 0;
     this.multipleElem = [];
-    this.init();
+    this.isActive = isActive;
+    this.closingClick = closingClick;
   }
 
   init() {
@@ -22,6 +25,10 @@ export default class Dropdown {
     });
 
     this.calcAmount();
+
+    if (this.isActive) {
+      this.toggleForm();
+    }
 
     this.mainContainer.addEventListener('click', (e) => {
       if (e.target === this.inputBtn) {
@@ -45,7 +52,9 @@ export default class Dropdown {
       });
     });
 
-
+    if (this.closingClick) {
+      this.closesForm();
+    }
   }
 
   calcMinus(valueElem, i) {
@@ -104,6 +113,17 @@ export default class Dropdown {
       counter.previousSibling.classList.add('dropdown__btn_disabled');
     }
   }
+
+  closesForm() {
+    document.addEventListener('mouseup', (e) => {
+      const withinBoundaries = e.composedPath().includes(this.dropdown);
+
+      if (!withinBoundaries &&
+        this.blindSelector.classList.contains('dropdown__blind_active')) {
+        this.toggleForm();
+      }
+    });
+  }
 }
 
 export class DropdownRooms extends Dropdown {
@@ -147,12 +167,18 @@ export class DropdownGuests extends Dropdown {
       ['гость', 'гостя', 'гостей'],
       ['младенец', 'младенца', 'младенцев']
     ];
+    this.clear = this.blindSelector.querySelector('[data-option="clear"]');
+    this.apply = this.blindSelector.querySelector('[data-option="apply"]');
+    this.clearForm();
+    this.applyForm();
   }
 
   calcAmount() {
     if (this.totalAmount === 0) {
       this.input.setAttribute('value', 'Сколько гостей');
+      this.clear.style.visibility = 'hidden';
     } else {
+      this.clear.style.visibility = 'visible';
       this.input.setAttribute('value', this.chooseWord());
     }
   }
@@ -169,5 +195,25 @@ export class DropdownGuests extends Dropdown {
     });
 
     return arr.join(', ');
+  }
+
+  applyForm() {
+    this.apply.addEventListener('click', () => {
+      this.toggleForm();
+    });
+  }
+
+  clearForm() {
+    this.clear.addEventListener('click', () => {
+      for (let i = 0; i < this.multipleElem.length; i++) {
+        this.totalAmount = 0;
+        this.multipleElem[i] = 0;
+        this.countersSelector[i].textContent = 0;
+        this.changeStateBtns(this.countersSelector[i]);
+      }
+
+      this.calcAmount();
+    });
+
   }
 }
