@@ -2,6 +2,7 @@ include ../../components/logo/logo
 include ../../components/heading/heading
 include ../../components/text-field/text-field
 include ../../components/dropdown/dropdown
+include ../../components/date-dropdown/date-dropdown
 
 include ../../components/checkbox/checkbox
 include ../../components/radio/radio
@@ -66,6 +67,10 @@ html(lang='ru')
                 value: ''
               })
             .ui-elements__date-drop
+              +date-dropdown({
+                title: "date Dropdown",
+                title2: "date Dropdown"
+              })
             .ui-elementst__filter-date-drop
               +heading({title: 'filter date dropdown'}).ui-elements__title
             .ui-elements__subs
