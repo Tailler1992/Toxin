@@ -1,0 +1,10 @@
+mixin information(content)
+  .information
+    each item in content
+      .information__row
+        .information__ico.material-icons=item.ico
+        .information__text
+          .information__title=item.title
+          .information__description=item.description
+      if item.isLine
+        .information__line

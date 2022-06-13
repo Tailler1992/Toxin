@@ -16,6 +16,7 @@ include ../../components/pagination/pagination
 include ../../components/check-list/check-list
 include ../../components/bullet-list/bullet-list
 
+include ../../components/information/information
 doctype html
 html(lang='ru')
   head
@@ -261,3 +262,18 @@ html(lang='ru')
             +heading({title: 'bullet list'}).ui-elements__list-title-right
             +bullet-list()
         section.ui-elements__footer
+          .ui-elements__footer-column
+            +information([
+              {
+                ico:"insert_emoticon",
+                title:"Комфорт",
+                description:"Шумопоглощающие стены",
+                isLine: true
+              },
+              {
+                ico:"location_city",
+                title:"Удобство",
+                description:"Окно в каждой из спален",
+                isLine: true},
+            ])
+          .ui-elements__footer-column

@@ -24,6 +24,8 @@ $material-icons-font-path: '~material-icons/iconfont/';
 @import '../../components/check-list/check-list';
 @import '../../components/bullet-list/bullet-list';
 
+@import '../../components/information/information';
+
 html {
   @include html;
 
@@ -194,7 +196,7 @@ html {
   &__list {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 288px;
+    margin-bottom: 21px;
 
     &-column {
       flex: 0 0 320px;
@@ -217,6 +219,14 @@ html {
 
   &__checklist{
     margin-bottom: 20px;
+  }
+
+
+  // section footer
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 41px;
   }
 
 }
