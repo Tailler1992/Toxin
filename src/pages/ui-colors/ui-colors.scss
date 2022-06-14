@@ -1,0 +1,24 @@
+@import '../../scss/_fonts';
+@import '../../scss/_nullstyle';
+@import '../../scss/_var-color';
+@import '../../scss/_var-font';
+
+
+
+html {
+  @include html;
+
+  background-color: #FFF;
+}
+
+.ui-colors {
+  &__logo {
+    max-width: 1380px;
+    margin: 30px auto 63px;
+  }
+
+  &__container {
+    max-width: 1158px;
+    margin: 0 auto;
+  }
+}
