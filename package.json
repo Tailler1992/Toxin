@@ -7,7 +7,7 @@
     "dev": "cross-env NODE_ENV=development webpack",
     "build": "cross-env NODE_ENV=production webpack",
     "watch": "cross-env NODE_ENV=development webpack --watch",
-    "start": "cross-env NODE_ENV=development webpack serve --open"
+    "start": "cross-env NODE_ENV=development webpack serve"
   },
   "author": "Aleksandr Peretertov",
   "license": "ISC",
