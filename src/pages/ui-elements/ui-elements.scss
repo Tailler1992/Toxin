@@ -25,6 +25,7 @@ $material-icons-font-path: '~material-icons/iconfont/';
 @import '../../components/bullet-list/bullet-list';
 
 @import '../../components/information/information';
+@import '../../components/comment/comment';
 
 html {
   @include html;
@@ -226,7 +227,12 @@ html {
   &__footer {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 41px;
+    padding-bottom: 132px;
+  }
+
+  &__comment{
+    margin-top: 30px;
+    margin-right: 2px;
   }
 
 }
