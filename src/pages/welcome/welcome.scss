@@ -1,0 +1,59 @@
+@import '../../scss/_fonts';
+@import '../../scss/_nullstyle';
+@import '../../scss/_var-color';
+@import '../../scss/_var-font';
+
+@import '../../components/logo/logo';
+@import '../../components/heading/heading';
+
+html {
+  @include html;
+
+  background-color: #FFF;
+}
+
+.welcome {
+
+  &__logo {
+    max-width: 1380px;
+    margin: 30px auto 63px;
+  }
+
+  &__container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+    padding-left: 21px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: 7px;
+      left: 0px;
+      width: 10.43px;
+      height: 10px;
+      content: "";
+      background: $ds25;
+      border-radius: 50%;
+    }
+  }
+
+  &__link {
+    line-height: 24px;
+    color: $ds75;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
