@@ -3,7 +3,7 @@
 @import '../../scss/_var-color';
 @import '../../scss/_var-font';
 
-
+@import '../../components/tone/tone';
 
 html {
   @include html;
@@ -20,5 +20,51 @@ html {
   &__container {
     max-width: 1158px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__tons{
+    padding-top: 2px;
+    padding-left: 9px;
+  }
+
+  &__headings {
+    max-width: 480px;
+    padding-top: 2px;
+    margin-right: 6px;
+  }
+
+  &__row {
+    @include h1;
+
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 52px;
+
+    &:nth-child(2){
+      @include h2;
+    }
+
+    &:nth-child(3){
+      @include h3;
+      margin-bottom: 47px;
+    }
+    &:nth-child(4){
+      @include html;
+    }
+  }
+
+  &__tag {
+    flex: 0 0 60px;
+    text-align: right;
+    margin-right: 30px;
+    font-weight: 400;
+    color: $ds25;
+  }
+
+  &__heading{
+    flex: 0 0 380px;
+
   }
 }
