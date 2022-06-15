@@ -18,6 +18,7 @@ module.exports = {
     'welcome': `${PATHS.pages}/welcome/welcome.js`,
     'ui-elements': `${PATHS.pages}/ui-elements/ui-elements.js`,
     'ui-colors': `${PATHS.pages}/ui-colors/ui-colors.js`,
+    'ui-cards': `${PATHS.pages}/ui-cards/ui-cards.js`,
   },
 
   output: {
@@ -63,6 +64,11 @@ module.exports = {
       template: `${PATHS.pages}/ui-colors/ui-colors.pug`,
       filename: 'ui-colors.html',
       chunks: ['ui-colors'],
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PATHS.pages}/ui-cards/ui-cards.pug`,
+      filename: 'ui-cards.html',
+      chunks: ['ui-cards'],
     }),
     new MiniCssExtractPlugin({
       filename: "assets/css/[name].css",
