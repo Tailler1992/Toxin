@@ -1,0 +1,38 @@
+include ../../components/logo/logo
+include ../../components/tone/tone
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title ui-colors
+  body
+    .ui-colorss
+      .ui-colors__logo
+        +logo()
+      main.ui-colors__container
+        .ui-colors__tons
+          +tone({title: 'Dark Shade 100%', id: '#1F2041'}).tone__color_ds100
+          +tone({title: 'Dark Shade 75%', id: '#1F2041'}).tone__color_ds75
+          +tone({title: 'Dark Shade 50%', id: '#1F2041'}).tone__color_ds50
+          +tone({title: 'Dark Shade 25%', id: '#1F2041'}).tone__color_ds25
+          +tone({title: 'Dark Shade 5%', id: '#1F2041'}).tone__color_ds5
+          +tone({title: 'Purple', id: '#BC9CFF'}).tone__color_purple
+          +tone({title: 'Green', id: '#6FCF97'}).tone__color_green
+        .ui-colors__headings
+          .ui-colors__row
+            .ui-colors__tag H1
+            .ui-colors__heading This one is the sub-section or widget title
+          .ui-colors__row
+            .ui-colors__tag H2
+            .ui-colors__heading Next one is the item title inside widgets
+          .ui-colors__row
+            .ui-colors__tag H3
+            .ui-colors__heading  This is a label or CTA text
+          .ui-colors__row
+            .ui-colors__tag Body
+            .ui-colors__heading
+              | This is the body text which is used for most <br>
+              | of the design, like paragraphs, lists, etc.

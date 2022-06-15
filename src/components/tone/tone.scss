@@ -1,0 +1,46 @@
+.tone {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &__color {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+
+    &_ds100 {
+      background: $ds100;
+    }
+    &_ds75 {
+      background: $ds75;
+    }
+    &_ds50 {
+      background: $ds50;
+    }
+    &_ds25 {
+      background: $ds25;
+    }
+    &_ds5 {
+      background: $ds5;
+    }
+    &_purple {
+      background: $purple;
+    }
+    &_green{
+      background: $green;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 28.5px;
+    color: $ds100;
+  }
+
+  &__id {
+    font-size: 19px;
+    line-height: 28px;
+  }
+}

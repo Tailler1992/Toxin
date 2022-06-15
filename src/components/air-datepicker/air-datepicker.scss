@@ -1,0 +1,317 @@
+.air-datepicker {
+  width: 320px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  font-family: $ff;
+
+  &.-inline-{
+    position: absolute;
+    top: 80px;
+    display: none;
+
+    &.-active- {
+        display: block;
+    }
+  }
+
+  &--pointer {
+    display: none;
+  }
+
+  // NAV
+  &-nav {
+    height: auto;
+    padding: 20px 20.7px 30px 20.2px;
+    border-bottom: none;
+
+    &--action {
+      color: #BC9CFF;
+
+      &:hover {
+        background: #FFFFFF;
+        color: $ds50;
+      }
+    }
+
+    &--title {
+      font-size: 19px;
+      font-weight: 700;
+      color: $ds100;
+
+      &:hover {
+        background: #FFFFFF;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  // ТЕЛО
+
+  &--content {
+    padding: 0 19.7px 0 20.9px;
+  }
+
+  &-body--day-names {
+    margin: 0;
+    grid-template-columns: repeat(7, 40px);
+  }
+
+  &-body--day-name {
+    height: 40px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: none;
+    color: $purple;
+  }
+
+  &-body--cells {
+    &.-days- {
+      grid-template-columns: repeat(7, 40px);
+      grid-auto-rows: 40px;
+    }
+
+    &.-months- {
+      justify-content: center;
+      grid-template-columns: repeat(4, 60px);
+      grid-auto-rows: 60px;
+    }
+
+    &.-years- {
+      justify-content: center;
+      grid-template-columns: repeat(4, 60px);
+      grid-auto-rows: 60px;
+    }
+  }
+
+  &-cell {
+    border-radius: 50%;
+    color: $ds50;
+    font-size: 12px;
+
+    &.-focus- {
+      background: $main-gr50;
+    }
+
+    &.-current- {
+      color: #FFFFFF;
+      font-weight: 700;
+      background: $secondary-gr100;
+
+      &.-focus- {
+        color: #FFFFFF;
+        background: $secondary-gr75;
+
+        &.-range-from- {
+          background: $main-gr100;
+
+          &.-focus- {
+            background: $main-gr75;
+          }
+        }
+      }
+
+      &.-in-range- {
+        border-radius: 50%;
+        background: $main-gr100;
+        color: #FFFFFF;
+
+        &::before {
+          content: '';
+          position: absolute;
+          z-index: -2;
+          right: 0;
+          border-radius: 50% 0 0 50%;
+          width: 100%;
+          height: 100%;
+          background: $main-gr25;
+        }
+      }
+    }
+
+    &.-disabled- {
+      cursor: default;
+      color: $ds50;
+
+      &.-range-from- {
+        background: #FFFFFF;
+        color: $ds50;
+        font-weight: 400;
+
+        &::before {
+          content: none;
+        }
+      }
+
+      &.-focus- {
+        color: $ds50;
+        background: $main-gr5;
+        font-weight: 400;
+      }
+
+      &.-in-range- {
+        color: $ds50;
+        background: #FFFFFF;
+      }
+
+      &.-current- {
+        &.-focus- {
+          color: $ds50;
+        }
+      }
+    }
+
+    &.-disabled- + &.-range-to- {
+      &::before {
+        content: none;
+      }
+    }
+
+    &.-in-range- {
+      background: $main-gr25;
+
+      &:hover {
+        background: $main-gr25;
+      }
+    }
+
+    &.-range-from- {
+      color: #FFFFFF;
+      border: none;
+      background: $main-gr100;
+      border-radius: 50%;
+      font-weight: 700;
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: -2;
+        right: 0;
+        border-radius: 50% 0 0 50%;
+        width: 100%;
+        height: 100%;
+        background: $main-gr25;
+      }
+
+    }
+
+    &.-range-to- {
+      color: #FFFFFF;
+      border: none;
+      background: $main-gr100;
+      border-radius: 50%;
+      font-weight: 700;
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        border-radius: 0 50% 50% 0;
+        width: 100%;
+        height: 100%;
+        background: $main-gr25;
+      }
+    }
+
+    &.-range-to-.-range-from- {
+      border-radius: 50%;
+
+      &::before {
+        content: none;
+      }
+    }
+
+    &.-selected- {
+      color: #fff;
+      border: none;
+      background: $main-gr100;
+
+      &.-current- {
+        color: #fff;
+        background: $main-gr100;
+      }
+
+      &.-focus- {
+        background: $main-gr75;
+      }
+    }
+
+    &.-day- {
+      &.-other-month- {
+        color: $ds25;
+
+        &:hover {
+          color: #fff;
+        }
+
+        &.-disabled- {
+          &.-focus- {
+            color: $ds25;
+          }
+        }
+
+        &.-range-to- {
+          color: #fff;
+        }
+
+        &.-selected- {
+          color: #fff;
+          background: $main-gr100;
+          border-radius: 50%;
+
+          &.-focus- {
+            background: $main-gr75;
+          }
+        }
+
+        &.-in-range- {
+          background: $main-gr25;
+          color: $ds25;
+
+          &.-focus- {
+            background: $main-gr25;
+          }
+
+          &.-disabled- {
+            background: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+
+  // BUTTONS
+  &--buttons {
+    padding: 20.44px 20px 20px;
+    border-top: none;
+  }
+
+  &-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-button {
+    height: auto;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $purple;
+
+    &:hover {
+      color: $ds50;
+      background: none;
+    }
+
+    &:active {
+      background: none;
+    }
+
+    &:focus {
+      color: $ds50;
+      background: none;
+    }
+  }
+}
