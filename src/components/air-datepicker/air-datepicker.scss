@@ -6,13 +6,13 @@
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   font-family: $ff;
 
-  &.-inline-{
+  &.-inline- {
     position: absolute;
     top: 80px;
     display: none;
 
     &.-active- {
-        display: block;
+      display: block;
     }
   }
 
@@ -48,7 +48,6 @@
   }
 
   // ТЕЛО
-
   &--content {
     padding: 0 19.7px 0 20.9px;
   }
