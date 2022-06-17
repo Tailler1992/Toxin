@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "air-datepicker": "^3.2.0",
+    "imask": "^6.4.2",
     "material-icons": "^1.11.1",
     "nouislider": "^15.6.0"
   }
