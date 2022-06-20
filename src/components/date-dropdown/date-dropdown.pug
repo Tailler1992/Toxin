@@ -3,23 +3,19 @@ include ../text-field/text-field
 
 mixin date-dropdown(options)
   .date-dropdown
-    .date-dropdown__column
-      +heading({title: options.title}).date-dropdown__title
-      +text-field({
-        type: "text",
-        name: "date-field",
-        placeholder: "ДД.ММ.ГГГГ",
-        value: "",
-        data: "text-mask",
-        btnMore: true
-      })
-    .date-dropdown__column
-      +heading({title: options.title2}).date-dropdown__title
-      +text-field({
-        type: "text",
-        name: "date-field",
-        placeholder: "ДД.ММ.ГГГГ",
-        value: "",
-        data: "text-mask",
-        btnMore: true
-      })
+    .date-dropdown__inputs
+      .date-dropdown__column
+        +text-field({
+          type: "text",
+          name: "date-field",
+          value: options.startValue,
+          btnMore: true
+        }).date-dropdown__input-start
+      .date-dropdown__column
+        +text-field({
+          type: "text",
+          name: "date-field",
+          value: options.endValue,
+          btnMore: true
+        }).date-dropdown__input-end
+    .date-dropdown__datepicker
