@@ -1,6 +1,8 @@
 .date-dropdown {
-  display: flex;
-  position: relative;
+
+  &__inputs {
+    display: flex;
+  }
 
   &__column {
     &:first-child {
@@ -8,7 +10,8 @@
     }
   }
 
-  &__title {
-    margin-bottom: 5.44px;
+  &__datepicker {
+    position: relative;
+    width: 100%;
   }
 }
