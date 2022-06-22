@@ -3,6 +3,8 @@ include ../../components/heading/heading
 include ../../components/text-field/text-field
 include ../../components/dropdown/dropdown
 include ../../components/date-dropdown/date-dropdown
+include ../../components/filter-date-dropdown/filter-date-dropdown
+
 
 include ../../components/checkbox/checkbox
 include ../../components/radio/radio
@@ -68,20 +70,19 @@ html(lang='ru')
                 type: 'text',
                 name: 'masked-field',
                 placeholder: 'ДД.ММ.ГГГГ',
-                value: ''
+                value: '',
+                data: 'text-mask'
               })
             .ui-elements__date-drop
               +date-dropdown({
-                title: "date Dropdown",
-                title2: "date Dropdown"
+                startValue: '',
+                startTitle: 'date Dropdown',
+                endValue: '17.08.2022',
+                endTitle: 'date Dropdown',
               })
             .ui-elements__filter-date-drop
               +heading({title: 'filter date dropdown'}).ui-elements__title
-              +text-field({
-                type: 'text',
-                name: 'test',
-                placeholder: '19 авг - 23 авг',
-              })
+              +filter-date-dropdown({value: '19 авг - 23 авг'})
             .ui-elements__subs
               +heading({
                 title: 'subscription text field'
