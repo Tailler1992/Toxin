@@ -1,0 +1,29 @@
+.search-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  max-width: 380px;
+
+  &__container {
+    padding: 39px 29px 30px;
+  }
+
+  &__title {
+    @include h1;
+    margin-bottom: 22px;
+  }
+
+  &__date-dropdown{
+    margin-bottom: 20px;
+  }
+
+  &__title-drop{
+    margin-bottom: 5px;
+  }
+
+  &__dropdown {
+    margin-bottom: 32px;
+  }
+
+}
