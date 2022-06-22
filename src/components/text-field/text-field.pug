@@ -5,7 +5,8 @@ mixin text-field(options)
       name=options.name,
       placeholder=options.placeholder,
       value = options.value,
-      data = options.data
+      data = options.data,
+      readonly = options.readonly
       )
     if options.btnMore
       button.text-field__btn.material-icons expand_more
