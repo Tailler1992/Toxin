@@ -5,7 +5,7 @@ include ../btn/btn
 
 mixin search-card(options)
   .search-card
-    form(action=options.action, method=options.method).search-card__container
+    form.search-card__container(action=options.action, method=options.method)
       h1.search-card__title=options.title
       .search-card__date-dropdown
         +date-dropdown({

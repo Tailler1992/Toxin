@@ -6,7 +6,7 @@ include ../btn/btn
 
 mixin registration-card(options)
   .registration-card
-    form(action=options.action, method=options.method).registration-card__container
+    form.registration-card__container(action=options.action, method=options.method)
       h1.registration-card__title=options.title
       .registration-card__name
         +text-field({
@@ -35,7 +35,7 @@ mixin registration-card(options)
           placeholder: 'ДД.ММ.ГГГГ',
           value: '',
           data: 'text-mask',
-          
+
         })
       .registration-card__authorization-data
         +heading({title: 'данные для входа в сервис'}).registration-card__sub-title
