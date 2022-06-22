@@ -1,0 +1,55 @@
+include ../text-field/text-field
+include ../heading/heading
+include ../btn/btn
+include ../date-dropdown/date-dropdown
+include ../dropdown/dropdown
+
+mixin booking-card(options)
+  .booking-card
+    form.booking-card__container(action=options.action, method=options.method)
+      .booking-card__description
+        .booking-card__room
+          .booking-card__room-symbol №
+          h1.booking-card__room-number=options.title
+          .booking-card__room-type люкс
+        .booking-card__price
+          .booking-card__price-sum 9 990₽
+          .booking-card__price-text в сутки
+      .booking-card__date-dropdown
+        +date-dropdown({
+          startValue: '19.08.2022',
+          startTitle: 'прибытие',
+          endValue: '23.08.2022',
+          endTitle: 'выезд',
+        })
+      .booking-card__dropdown
+        +heading({title: 'гости'}).booking-card__dropdown-title
+        +dropdown([
+          {title: "взрослые", count: 2},
+          {title: "дети", count: 1},
+          {title: "младенцы", count: 0},
+        ], true)
+      .booking-card__cost-container
+        .booking-card__cost-row
+          .booking-card__service 9 990₽ х 4 суток
+          .booking-card__service-cost 39 960₽
+        .booking-card__cost-row
+          .booking-card__service Сбор за услуги: скидка 2 179₽
+          .booking-card__service-info(
+            data-tooltip="Скидка не суммируется с другими действующими предложениями"
+            ) i
+          .booking-card__service-cost 0₽
+        .booking-card__cost-row
+          .booking-card__service Сбор за дополнительные услуги
+          .booking-card__service-info(
+            data-tooltip="Перечень и стоимость дополнительных услуг и сборов"
+            ) i
+          .booking-card__service-cost 300₽
+      .booking-card__result
+        h2.booking-card__result-sum Итого
+        .booking-card__result-line
+        h2.booking-card__result-sum 38 081₽
+      +btn({
+        typeBtn: 'button',
+        title: 'забронировать'
+      }).btn_theme-long
