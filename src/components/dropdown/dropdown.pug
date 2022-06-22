@@ -16,17 +16,19 @@ mixin dropdown(content, isBtn)
         .dropdown__row
           +heading({title: `${item.title}`})
           .dropdown__control
-            button.dropdown__btn(data-minus) -
+            button(type="button").dropdown__btn(data-minus) -
             span.dropdown__count=item.count
-            button.dropdown__btn(data-plus) +
+            button(type="button").dropdown__btn(data-plus) +
       if isBtn
         .dropdown__text-btns
           +btn({
+            typeBtn: 'button',
             type: 'button',
             title: 'очистить',
             data: 'clear'
           }).btn_theme-no-wrapper
           +btn({
+            typeBtn: 'button',
             type: 'button',
             title: 'применить',
             data: 'apply'
