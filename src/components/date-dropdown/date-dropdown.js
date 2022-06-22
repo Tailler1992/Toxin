@@ -176,6 +176,10 @@ const dateDropdown = (container) => {
   function changeStateBtns(dp) {
     const btnClear = dp.$datepicker.querySelectorAll('.air-datepicker-button');
 
+    btnClear.forEach(btn => {
+      btn.setAttribute('type', 'button');
+    });
+
     if (Date.parse(startInputValue) || Date.parse(endInputValue)) {
       btnClear[0].style.visibility = 'visible';
     }
