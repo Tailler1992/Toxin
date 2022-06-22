@@ -9,6 +9,6 @@ mixin text-field(options)
       readonly = options.readonly
       )
     if options.btnMore
-      button.text-field__btn.material-icons expand_more
+      button(type="button").text-field__btn.material-icons expand_more
     if options.btnForward
       button(type="submit").text-field__btn.text-field__btn_purple.material-icons arrow_forward
