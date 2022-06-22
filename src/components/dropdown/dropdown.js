@@ -30,10 +30,8 @@ export default class Dropdown {
       this.toggleForm();
     }
 
-    this.mainContainer.addEventListener('click', (e) => {
-      if (e.target === this.inputBtn) {
-        this.toggleForm();
-      }
+    this.input.addEventListener('click', (e) => {
+      this.toggleForm();
     });
 
     this.controlsSelector.forEach((item, i) => {

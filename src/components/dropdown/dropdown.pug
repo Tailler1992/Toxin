@@ -8,8 +8,9 @@ mixin dropdown(content, isBtn)
       type: 'text',
       name: 'dropdown-text',
       value: 'Сколько гостей',
-      btnMore: true
-    })
+      btnMore: true,
+      readonly: true,
+    }).dropdown__input
     .dropdown__blind
       each item in content
         .dropdown__row
