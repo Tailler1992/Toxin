@@ -16,9 +16,9 @@ mixin dropdown(content, isBtn)
         .dropdown__row
           +heading({title: `${item.title}`})
           .dropdown__control
-            button(type="button").dropdown__btn(data-minus) -
+            button.dropdown__btn(data-minus, type="button") -
             span.dropdown__count=item.count
-            button(type="button").dropdown__btn(data-plus) +
+            button.dropdown__btn(data-plus, type="button") +
       if isBtn
         .dropdown__text-btns
           +btn({
