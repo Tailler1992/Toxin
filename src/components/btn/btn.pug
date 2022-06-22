@@ -1,6 +1,11 @@
 mixin btn(options)
-  case options.type
+  case options.typeBtn
     when "link"
-      a.btn&attributes(attributes)(href=options.href)= options.title
+      a.btn&attributes(attributes)(
+        href=options.href
+      )= options.title
     when "button"
-      button.btn&attributes(attributes)(data-option=options.data)= options.title
+      button.btn&attributes(attributes)(
+        data-option=options.data,
+        type=options.type
+      )= options.title
