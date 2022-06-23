@@ -1,0 +1,107 @@
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+.glide {
+
+  &__arrow {
+    position: absolute;
+    display: block;
+    height: 99%;
+    top: 50%;
+    z-index: 2;
+    color: white;
+    padding: 7px 8px;
+    background:
+      linear-gradient(90deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0) 99.99%,
+        rgba(255, 255, 255, 0) 100%);
+    border: none;
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity 150ms ease, border 300ms ease-in-out;
+    transform: translateY(-50%);
+    line-height: 1;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      border-color: white;
+    }
+
+    &--left {
+      left: 0;
+    }
+
+    &--ico-left {
+      transform: rotate(90deg);
+    }
+
+    &--right {
+      right: 0;
+      background:
+        linear-gradient(270deg,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0) 99.99%,
+          rgba(255, 255, 255, 0) 100%);
+
+    }
+
+    &--ico-right {
+      transform: rotate(-90deg);
+    }
+
+    &--disabled {
+      opacity: 0.33;
+    }
+  }
+
+
+  &__bullets {
+    position: absolute;
+    z-index: 2;
+    bottom: 15px;
+    right: 15px;
+    display: inline-flex;
+    list-style: none;
+  }
+
+  &__bullet {
+    width: 7.5px;
+    height: 7.5px;
+    padding: 0;
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    line-height: 0;
+    filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
+    margin: 0 0.25em;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    &--active {
+      background-color: white;
+    }
+  }
+
+  // &#{$sm}swipeable {
+  //   cursor: grab;
+  //   cursor: -moz-grab;
+  //   cursor: -webkit-grab;
+  // }
+
+  // &#{$sm}dragging {
+  //   cursor: grabbing;
+  //   cursor: -moz-grabbing;
+  //   cursor: -webkit-grabbing;
+  // }
+}
