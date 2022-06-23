@@ -1,3 +1,10 @@
+include ../../components/logo/logo
+include ../../components/search-card/search-card
+include ../../components/registration-card/registration-card
+include ../../components/booking-card/booking-card
+include ../../components/login-card/login-card
+include ../../components/room-card/room-card
+
 doctype html
 html(lang='ru')
   head
@@ -10,3 +17,31 @@ html(lang='ru')
       .ui-cards__logo
         +logo()
       main.ui-cards__container
+        .ui-cards__column
+          .ui-cards__card
+            +search-card({
+              title: 'Найдём номера под ваши пожелания',
+              action: '',
+              method: 'GET'
+              })
+          .ui-cards__card
+            +registration-card({
+              title: 'Регистрация аккаунта',
+              action: '',
+              method: 'GET'
+            })
+        .ui-cards__column
+          .ui-cards__card
+            +booking-card({
+              title: '888',
+                action: '',
+              method: 'GET'
+            })
+          .ui-cards__card
+            +login-card({
+              title: 'Войти'
+            })
+        .ui-cards__column
+          .ui-cards__air
+          .ui-cards__room
+            +room-card()

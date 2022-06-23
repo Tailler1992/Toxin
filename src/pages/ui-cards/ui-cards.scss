@@ -1,0 +1,56 @@
+@import '../../scss/_fonts';
+@import '../../scss/_nullstyle';
+@import '../../scss/_var-color';
+@import '../../scss/_var-font';
+
+$material-icons-font-path: '~material-icons/iconfont/';
+@import 'material-icons/iconfont/material-icons.scss';
+
+@import '../../components/logo/logo';
+@import '../../components/heading/heading';
+@import '../../components/text-field/text-field';
+@import '../../components/dropdown/dropdown';
+@import '../../components/date-dropdown/date-dropdown';
+@import '../../components/air-datepicker/air-datepicker';
+@import '../../components/btn/btn';
+@import '../../components/radio/radio';
+@import '../../components/toggle/toggle';
+
+@import '../../components/search-card/search-card';
+@import '../../components/registration-card/registration-card';
+@import '../../components/booking-card/booking-card';
+@import '../../components/login-card/login-card';
+@import '../../components/room-card/room-card';
+
+html {
+  @include html;
+
+  background-color: #E5E5E5;
+}
+
+.ui-cards {
+  &__logo {
+    max-width: 1380px;
+    margin: 30px auto 70px;
+  }
+
+  &__container {
+    max-width: 1158px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+  &__air{
+    width: 320px;
+    height: 369px;
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  &__card{
+    margin-bottom: 40px;
+  }
+}
