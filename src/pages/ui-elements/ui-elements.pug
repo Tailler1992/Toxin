@@ -82,7 +82,7 @@ html(lang='ru')
               })
             .ui-elements__filter-date-drop
               +heading({title: 'filter date dropdown'}).ui-elements__title
-              +filter-date-dropdown({value: '19 авг - 23 авг'})
+              +filter-date-dropdown()
             .ui-elements__subs
               +heading({
                 title: 'subscription text field'
@@ -141,38 +141,38 @@ html(lang='ru')
               +heading({title: 'buttons'}).ui-elements__title-right
               .ui-elements__btn-row
                 +btn({
-                  type: 'link',
+                  typeBtn: 'link',
                   href: '#',
                   title: 'CLICK ME'
                 }).ui-elements__btn-link-left
                 +btn({
-                  type: 'link',
+                  typeBtn: 'link',
                   href: '#',
                   title: 'CLICK ME'
                 }).btn_theme-hover
               .ui-elements__btn-row
                 +btn({
-                  type: 'link',
+                  typeBtn: 'link',
                   href: '#',
                   title: 'CLICK ME'
                 }).btn_theme-hollow.ui-elements__btn-link-left
                 +btn({
-                  type: 'link',
+                  typeBtn: 'link',
                   href: '#',
                   title: 'CLICK ME'
                 }).btn_theme-hollow.btn_theme-hover
               .ui-elements__btn-row
                 +btn({
-                  type: 'button',
+                  typeBtn: 'button',
                   title: 'CLICK ME'
                 }).btn_theme-no-wrapper.ui-elements__btn-left
                 +btn({
-                  type: 'button',
+                  typeBtn: 'button',
                   title: 'CLICK ME'
                 }).btn_theme-no-wrapper.btn_theme-hover-no-wrapper
               .ui-elements__btn-row
                 +btn({
-                  type: 'button',
+                  typeBtn: 'button',
                   title: 'перейти к оплате'
                 }).btn_theme-long
             .ui-elements__pagination
@@ -191,7 +191,6 @@ html(lang='ru')
                 {title: "кровати", count: 2},
                 {title: "ванные комнаты", count: 0},
               ])
-
             .ui-elements__drop-room-active
               +heading({
                 title: 'dropdown',
@@ -202,7 +201,6 @@ html(lang='ru')
                 {title: "кровати", count: 2},
                 {title: "ванные комнаты", count: 0},
               ])
-
           .ui-elements__dropdowns-column
             .ui-elements__drop-guest
               +heading({title: 'dropdown'}).ui-elements__drop-title
@@ -211,7 +209,6 @@ html(lang='ru')
                 {title: "дети", count: 0},
                 {title: "младенцы", count: 0},
               ], true)
-
           .ui-elements__dropdowns-column
             .ui-elements__drop-guest-filled
               +heading({title: 'dropdown'}).ui-elements__drop-title
