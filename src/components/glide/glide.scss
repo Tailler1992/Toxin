@@ -2,10 +2,18 @@
 
 .glide {
 
+  &__track {
+    border-radius: 4px 4px 0px 0px;
+  }
+
+  &__img {
+    display: block;
+  }
+
   &__arrow {
     position: absolute;
     display: block;
-    height: 99%;
+    height: 100%;
     top: 50%;
     z-index: 2;
     color: white;
@@ -16,9 +24,10 @@
         rgba(0, 0, 0, 0) 99.99%,
         rgba(255, 255, 255, 0) 100%);
     border: none;
-    opacity: 1;
+    border-top-left-radius: 4px;
+    opacity: 0;
     cursor: pointer;
-    transition: opacity 150ms ease, border 300ms ease-in-out;
+    transition: opacity 400ms ease;
     transform: translateY(-50%);
     line-height: 1;
 
@@ -40,12 +49,12 @@
 
     &--right {
       right: 0;
+      border-top-right-radius: 4px;
       background:
         linear-gradient(270deg,
           rgba(0, 0, 0, 0.5) 0%,
           rgba(0, 0, 0, 0) 99.99%,
           rgba(255, 255, 255, 0) 100%);
-
     }
 
     &--ico-right {
@@ -55,6 +64,14 @@
     &--disabled {
       opacity: 0.33;
     }
+  }
+
+  &:hover &__arrow {
+    opacity: 1;
+  }
+
+  &:focus &__arrow {
+    opacity: 1;
   }
 
 
@@ -93,15 +110,11 @@
     }
   }
 
-  // &#{$sm}swipeable {
-  //   cursor: grab;
-  //   cursor: -moz-grab;
-  //   cursor: -webkit-grab;
-  // }
+  &--swipeable {
+    cursor: grab;
+  }
 
-  // &#{$sm}dragging {
-  //   cursor: grabbing;
-  //   cursor: -moz-grabbing;
-  //   cursor: -webkit-grabbing;
-  // }
+  &--dragging {
+    cursor: grabbing;
+  }
 }
