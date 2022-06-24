@@ -1,16 +1,14 @@
-mixin glide()
+mixin glide(options)
+  - let className = options.glideBtnActive ? 'glide__arrows_visible' : '';
+
   .glide
     .glide__track(data-glide-el='track')
       ul.glide__slides
-        li.glide__slide
-          img.glide__img(src=require(`../../components/common.blocks/room-card/1.jpg`), alt='1')
-        li.glide__slide
-          img.glide__img(src=require(`../../components/common.blocks/room-card/2.jpg`), alt='2')
-        li.glide__slide
-          img.glide__img(src=require(`../../components/common.blocks/room-card/2.jpg`), alt='2')
-        li.glide__slide
-          img.glide__img(src=require(`../../components/common.blocks/room-card/2.jpg`), alt='2')
-    .glide__arrows(data-glide-el='controls')
+        each image in options.images
+          - let imageName = image
+          li.glide__slide
+            img.glide__img(src=require(`../../components/common.blocks/room-card/${imageName}.jpg`), alt=`room-${imageName}`)
+    .glide__arrows(data-glide-el='controls' class=className)
       button.glide__arrow.glide__arrow--left(data-glide-dir="<")
         .glide__arrow--ico-left.material-icons expand_more
       button.glide__arrow.glide__arrow--right(data-glide-dir=">")
