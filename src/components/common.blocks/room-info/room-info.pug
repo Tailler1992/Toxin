@@ -1,0 +1,13 @@
+mixin room-info(options)
+  .room-info
+    .room-info__row
+      .room-info__symbol №
+      if !options.roomNumberBib
+        .room-info__number=options.roomNumber
+      else
+        .room-info__number.room-info__number_big=options.roomNumber
+      if options.roomType
+        .room-info__type=options.roomType
+    .room-info__row
+      .room-info__price=`${options.roomPrice}₽`
+      .room-info__term в сутки
