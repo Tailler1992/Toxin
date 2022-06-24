@@ -1,4 +1,4 @@
-import glide from '../glide/glide';
+import glide from '../../library.blocks/glide/glide';
 
 const roomCard = () => {
   glide();

@@ -6,21 +6,21 @@
 $material-icons-font-path: '~material-icons/iconfont/';
 @import 'material-icons/iconfont/material-icons.scss';
 
-@import '../../components/logo/logo';
-@import '../../components/heading/heading';
-@import '../../components/text-field/text-field';
-@import '../../components/dropdown/dropdown';
-@import '../../components/date-dropdown/date-dropdown';
-@import '../../components/air-datepicker/air-datepicker';
-@import '../../components/btn/btn';
-@import '../../components/radio/radio';
-@import '../../components/toggle/toggle';
+@import '../../components/common.blocks/logo/logo';
+@import '../../components/common.blocks/heading/heading';
+@import '../../components/common.blocks/text-field/text-field';
+@import '../../components/common.blocks/dropdown/dropdown';
+@import '../../components/common.blocks/date-dropdown/date-dropdown';
+@import '../../components/common.blocks/air-datepicker/air-datepicker';
+@import '../../components/common.blocks/btn/btn';
+@import '../../components/common.blocks/radio/radio';
+@import '../../components/common.blocks/toggle/toggle';
 
-@import '../../components/search-card/search-card';
-@import '../../components/registration-card/registration-card';
-@import '../../components/booking-card/booking-card';
-@import '../../components/login-card/login-card';
-@import '../../components/room-card/room-card';
+@import '../../components/common.blocks/search-card/search-card';
+@import '../../components/common.blocks/registration-card/registration-card';
+@import '../../components/common.blocks/booking-card/booking-card';
+@import '../../components/common.blocks/login-card/login-card';
+@import '../../components/common.blocks/room-card/room-card';
 
 html {
   @include html;

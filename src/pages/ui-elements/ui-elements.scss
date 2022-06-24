@@ -6,27 +6,26 @@
 $material-icons-font-path: '~material-icons/iconfont/';
 @import 'material-icons/iconfont/material-icons.scss';
 
-@import '../../components/logo/logo';
-@import '../../components/heading/heading';
-@import '../../components/text-field/text-field';
-@import '../../components/dropdown/dropdown';
-@import '../../components/date-dropdown/date-dropdown';
-@import '../../components/filter-date-dropdown/filter-date-dropdown';
+@import '../../components/common.blocks/logo/logo';
+@import '../../components/common.blocks/heading/heading';
+@import '../../components/common.blocks/text-field/text-field';
+@import '../../components/common.blocks/dropdown/dropdown';
+@import '../../components/common.blocks/date-dropdown/date-dropdown';
+@import '../../components/common.blocks/filter-date-dropdown/filter-date-dropdown';
 
-@import '../../components/checkbox/checkbox';
-@import '../../components/radio/radio';
-@import '../../components/toggle/toggle';
-@import '../../components/like/like';
-@import '../../components/rating/rating';
-@import '../../components/slider/slider';
-@import '../../components/btn/btn';
-@import '../../components/pagination/pagination';
+@import '../../components/common.blocks/checkbox/checkbox';
+@import '../../components/common.blocks/radio/radio';
+@import '../../components/common.blocks/toggle/toggle';
+@import '../../components/common.blocks/like/like';
+@import '../../components/common.blocks/rating/rating';
 
-@import '../../components/check-list/check-list';
-@import '../../components/bullet-list/bullet-list';
+@import '../../components/common.blocks/btn/btn';
+@import '../../components/common.blocks/pagination/pagination';
+@import '../../components/common.blocks/check-list/check-list';
+@import '../../components/common.blocks/bullet-list/bullet-list';
 
-@import '../../components/information/information';
-@import '../../components/comment/comment';
+@import '../../components/common.blocks/information/information';
+@import '../../components/common.blocks/comment/comment';
 
 html {
   @include html;

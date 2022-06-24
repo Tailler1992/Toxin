@@ -3,11 +3,13 @@ mixin glide()
     .glide__track(data-glide-el='track')
       ul.glide__slides
         li.glide__slide
-          img.glide__img(src=require(`../../components/room-card/1.jpg`), alt='1')
+          img.glide__img(src=require(`../../components/common.blocks/room-card/1.jpg`), alt='1')
         li.glide__slide
-          img.glide__img(src=require(`../../components/room-card/2.jpg`), alt='2')
+          img.glide__img(src=require(`../../components/common.blocks/room-card/2.jpg`), alt='2')
         li.glide__slide
-          img.glide__img(src=require(`../../components/room-card/2.jpg`), alt='2')
+          img.glide__img(src=require(`../../components/common.blocks/room-card/2.jpg`), alt='2')
+        li.glide__slide
+          img.glide__img(src=require(`../../components/common.blocks/room-card/2.jpg`), alt='2')
     .glide__arrows(data-glide-el='controls')
       button.glide__arrow.glide__arrow--left(data-glide-dir="<")
         .glide__arrow--ico-left.material-icons expand_more
@@ -17,3 +19,4 @@ mixin glide()
       button.glide__bullet(data-glide-dir="=0")
       button.glide__bullet(data-glide-dir="=1")
       button.glide__bullet(data-glide-dir="=2")
+      button.glide__bullet(data-glide-dir="=3")

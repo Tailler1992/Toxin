@@ -1,12 +1,12 @@
-import {DropdownRooms, DropdownGuests} from '../../components/dropdown/dropdown';
-import dataDrop from '../../components/date-dropdown/date-dropdown';
-import filterDataDrop from '../../components/filter-date-dropdown/filter-date-dropdown';
-import like from '../../components/like/like';
-import rating from '../../components/rating/rating';
-import slider from '../../components/slider/slider';
-import pagination from '../../components/pagination/pagination';
-import checkList from '../../components/check-list/check-list';
-import mask from '../../components/text-field/text-field';
+import {DropdownRooms, DropdownGuests} from '../../components/common.blocks/dropdown/dropdown';
+import dataDrop from '../../components/common.blocks/date-dropdown/date-dropdown';
+import filterDataDrop from '../../components/common.blocks/filter-date-dropdown/filter-date-dropdown';
+import like from '../../components/common.blocks/like/like';
+import rating from '../../components/common.blocks/rating/rating';
+import slider from '../../components/library.blocks/slider/slider';
+import pagination from '../../components/common.blocks/pagination/pagination';
+import checkList from '../../components/common.blocks/check-list/check-list';
+import mask from '../../components/common.blocks/text-field/text-field';
 
 window.addEventListener('DOMContentLoaded', () => {
   new DropdownGuests({container: '.ui-elements__guests-drop', closingClick: true}).init();

@@ -2,7 +2,7 @@ mixin comment(options)
 
   .comment
     .comment__row
-      img.comment__img(src=require(`../../components/comment/${options.img}.jpg`), alt=options.alt)
+      img.comment__img(src=require(`../../components/common.blocks/comment/${options.img}.jpg`), alt=options.alt)
       .comment__column
         .comment__name=options.name
         .comment__text=options.activity

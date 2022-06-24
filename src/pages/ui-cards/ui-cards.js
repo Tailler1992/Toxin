@@ -1,7 +1,7 @@
-import searchCard from '../../components/search-card/search-card';
-import registrationCard from '../../components/registration-card/registration-card';
-import bookingCard from '../../components/booking-card/booking-card';
-import roomCard from '../../components/room-card/room-card';
+import searchCard from '../../components/common.blocks/search-card/search-card';
+import registrationCard from '../../components/common.blocks/registration-card/registration-card';
+import bookingCard from '../../components/common.blocks/booking-card/booking-card';
+import roomCard from '../../components/common.blocks/room-card/room-card';
 
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';

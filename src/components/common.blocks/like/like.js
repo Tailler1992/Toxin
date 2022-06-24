@@ -3,7 +3,7 @@ const like = () => {
 
   likes.forEach(like => {
     const heart = like.querySelector('.like__heart');
-    const count = like.querySelector('.like__quantity')
+    const count = like.querySelector('.like__quantity');
 
     like.addEventListener('click', () => {
 

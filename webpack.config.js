@@ -46,7 +46,7 @@ module.exports = {
 
   devServer: {
     static: './dist',
-    open: ['ui-colors.html','welcome.html'],
+    open: ['welcome.html'],
   },
 
   plugins: [
