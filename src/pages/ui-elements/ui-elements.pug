@@ -1,25 +1,27 @@
-include ../../components/common.blocks/logo/logo
-include ../../components/common.blocks/heading/heading
-include ../../components/common.blocks/text-field/text-field
-include ../../components/common.blocks/dropdown/dropdown
-include ../../components/common.blocks/date-dropdown/date-dropdown
-include ../../components/common.blocks/filter-date-dropdown/filter-date-dropdown
+include ../../components/common.blocks/primitives/logo/logo
+include ../../components/common.blocks/primitives/heading/heading
+include ../../components/common.blocks/primitives/text-field/text-field
+include ../../components/common.blocks/composite/dropdown/dropdown
+include ../../components/common.blocks/composite/date-dropdown/date-dropdown
+include ../../components/common.blocks/composite/filter-date-dropdown/filter-date-dropdown
 
 
-include ../../components/common.blocks/checkbox/checkbox
-include ../../components/common.blocks/radio/radio
-include ../../components/common.blocks/toggle/toggle
-include ../../components/common.blocks/like/like
-include ../../components/common.blocks/rating/rating
-include ../../components/library.blocks/slider/slider
-include ../../components/common.blocks/btn/btn
-include ../../components/common.blocks/pagination/pagination
+include ../../components/common.blocks/primitives/checkbox/checkbox
+include ../../components/common.blocks/primitives/radio/radio
+include ../../components/common.blocks/primitives/toggle/toggle
+include ../../components/common.blocks/primitives/like/like
+include ../../components/common.blocks/primitives/rating/rating
 
-include ../../components/common.blocks/check-list/check-list
-include ../../components/common.blocks/bullet-list/bullet-list
+include ../../components/common.blocks/composite/range-slider/range-slider
 
-include ../../components/common.blocks/information/information
-include ../../components/common.blocks/comment/comment
+include ../../components/common.blocks/primitives/btn/btn
+include ../../components/common.blocks/primitives/pagination/pagination
+
+include ../../components/common.blocks/composite/check-list/check-list
+include ../../components/common.blocks/primitives/bullet-list/bullet-list
+
+include ../../components/common.blocks/primitives/information/information
+include ../../components/common.blocks/composite/comment/comment
 
 doctype html
 html(lang='ru')
@@ -133,7 +135,7 @@ html(lang='ru')
 
           .ui-elements__top-column
             .ui-elements__slider
-              +slider({
+              +range-slider({
                 title: "Range Slider",
                 price: "5 000₽ - 10 000₽"
               })

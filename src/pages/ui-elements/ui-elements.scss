@@ -6,26 +6,29 @@
 $material-icons-font-path: '~material-icons/iconfont/';
 @import 'material-icons/iconfont/material-icons.scss';
 
-@import '../../components/common.blocks/logo/logo';
-@import '../../components/common.blocks/heading/heading';
-@import '../../components/common.blocks/text-field/text-field';
-@import '../../components/common.blocks/dropdown/dropdown';
-@import '../../components/common.blocks/date-dropdown/date-dropdown';
-@import '../../components/common.blocks/filter-date-dropdown/filter-date-dropdown';
+@import '../../components/common.blocks/primitives/logo/logo';
 
-@import '../../components/common.blocks/checkbox/checkbox';
-@import '../../components/common.blocks/radio/radio';
-@import '../../components/common.blocks/toggle/toggle';
-@import '../../components/common.blocks/like/like';
-@import '../../components/common.blocks/rating/rating';
+@import '../../components/common.blocks/primitives/heading/heading';
+@import '../../components/common.blocks/primitives/text-field/text-field';
+@import '../../components/common.blocks/composite/dropdown/dropdown';
+@import '../../components/common.blocks/composite/date-dropdown/date-dropdown';
+@import '../../components/common.blocks/composite/filter-date-dropdown/filter-date-dropdown';
 
-@import '../../components/common.blocks/btn/btn';
-@import '../../components/common.blocks/pagination/pagination';
-@import '../../components/common.blocks/check-list/check-list';
-@import '../../components/common.blocks/bullet-list/bullet-list';
+@import '../../components/common.blocks/primitives/checkbox/checkbox';
+@import '../../components/common.blocks/primitives/radio/radio';
+@import '../../components/common.blocks/primitives/toggle/toggle';
+@import '../../components/common.blocks/primitives/like/like';
+@import '../../components/common.blocks/primitives/rating/rating';
 
-@import '../../components/common.blocks/information/information';
-@import '../../components/common.blocks/comment/comment';
+@import '../../components/common.blocks/primitives/btn/btn';
+@import '../../components/common.blocks/primitives/pagination/pagination';
+@import '../../components/common.blocks/composite/check-list/check-list';
+@import '../../components/common.blocks/primitives/bullet-list/bullet-list';
+
+@import '../../components/common.blocks/primitives/information/information';
+@import '../../components/common.blocks/composite/comment/comment';
+
+@import '../../components/common.blocks/composite/range-slider/range-slider';
 
 html {
   @include html;

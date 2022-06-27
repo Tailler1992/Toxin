@@ -3,8 +3,8 @@
 @import '../../scss/_var-color';
 @import '../../scss/_var-font';
 
-@import '../../components/common.blocks/logo/logo';
-@import '../../components/common.blocks/heading/heading';
+@import '../../components/common.blocks/primitives/logo/logo';
+@import '../../components/common.blocks/primitives/heading/heading';
 
 html {
   @include html;

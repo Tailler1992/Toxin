@@ -1,7 +1,7 @@
-import searchCard from '../../components/common.blocks/search-card/search-card';
-import registrationCard from '../../components/common.blocks/registration-card/registration-card';
-import bookingCard from '../../components/common.blocks/booking-card/booking-card';
-import roomCard from '../../components/common.blocks/room-card/room-card';
+import searchCard from '../../components/common.blocks/cards/search-card/search-card';
+import registrationCard from '../../components/common.blocks/cards/registration-card/registration-card';
+import bookingCard from '../../components/common.blocks/cards/booking-card/booking-card';
+import roomCard from '../../components/common.blocks/cards/room-card/room-card';
 
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
@@ -10,6 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   searchCard();
   registrationCard();
   bookingCard();
+  roomCard();
 
   const dp = new AirDatepicker('.ui-cards__air', {
     range: true,
@@ -31,9 +32,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   dp.$datepicker.style.display = 'block';
   dp.$datepicker.style.top = 0;
-
-
-  roomCard();
 });
 
 import './ui-cards.scss';

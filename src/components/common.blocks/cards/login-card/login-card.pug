@@ -1,0 +1,34 @@
+include ../../primitives/text-field/text-field
+include ../../primitives/btn/btn
+
+mixin login-card(options)
+  .login-card
+    form.login-card__container(action=options.action, method=options.method)
+      h1.login-card__title=options.title
+      .login-card__email
+        +text-field({
+          type: 'email',
+          name: 'email',
+          placeholder: 'Email',
+          value: ''
+        })
+      .login-card__password
+        +text-field({
+          type: 'password',
+          name: 'password',
+          placeholder: 'Пароль',
+          value: ''
+        })
+      .login-card__entry
+        +btn({
+          typeBtn: 'button',
+          title: 'войти'
+        }).btn_theme-long
+      .login-card__registration
+        p.login-card__description
+          | Нет аккаунта на Toxin?
+        +btn({
+          typeBtn: 'link',
+          href: '#',
+          title: 'создать'
+        }).btn_theme-hollow.login-card__btn-create

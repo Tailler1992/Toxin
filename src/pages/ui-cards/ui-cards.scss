@@ -6,21 +6,21 @@
 $material-icons-font-path: '~material-icons/iconfont/';
 @import 'material-icons/iconfont/material-icons.scss';
 
-@import '../../components/common.blocks/logo/logo';
-@import '../../components/common.blocks/heading/heading';
-@import '../../components/common.blocks/text-field/text-field';
-@import '../../components/common.blocks/dropdown/dropdown';
-@import '../../components/common.blocks/date-dropdown/date-dropdown';
-@import '../../components/common.blocks/air-datepicker/air-datepicker';
-@import '../../components/common.blocks/btn/btn';
-@import '../../components/common.blocks/radio/radio';
-@import '../../components/common.blocks/toggle/toggle';
+@import '../../components/common.blocks/primitives/logo/logo';
+@import '../../components/common.blocks/primitives/heading/heading';
+@import '../../components/common.blocks/primitives/text-field/text-field';
+@import '../../components/common.blocks/composite/dropdown/dropdown';
+@import '../../components/common.blocks/composite/date-dropdown/date-dropdown';
+@import '../../components/common.blocks/libraries/air-datepicker/air-datepicker';
+@import '../../components/common.blocks/primitives/btn/btn';
+@import '../../components/common.blocks/primitives/radio/radio';
+@import '../../components/common.blocks/primitives/toggle/toggle';
 
-@import '../../components/common.blocks/search-card/search-card';
-@import '../../components/common.blocks/registration-card/registration-card';
-@import '../../components/common.blocks/booking-card/booking-card';
-@import '../../components/common.blocks/login-card/login-card';
-@import '../../components/common.blocks/room-card/room-card';
+@import '../../components/common.blocks/cards/search-card/search-card';
+@import '../../components/common.blocks/cards/registration-card/registration-card';
+@import '../../components/common.blocks/cards/booking-card/booking-card';
+@import '../../components/common.blocks/cards/login-card/login-card';
+@import '../../components/common.blocks/cards/room-card/room-card';
 
 html {
   @include html;

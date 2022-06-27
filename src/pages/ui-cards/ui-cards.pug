@@ -1,9 +1,9 @@
-include ../../components/common.blocks/logo/logo
-include ../../components/common.blocks/search-card/search-card
-include ../../components/common.blocks/registration-card/registration-card
-include ../../components/common.blocks/booking-card/booking-card
-include ../../components/common.blocks/login-card/login-card
-include ../../components/common.blocks/room-card/room-card
+include ../../components/common.blocks/primitives/logo/logo
+include ../../components/common.blocks/cards/search-card/search-card
+include ../../components/common.blocks/cards/registration-card/registration-card
+include ../../components/common.blocks/cards/booking-card/booking-card
+include ../../components/common.blocks/cards/login-card/login-card
+include ../../components/common.blocks/cards/room-card/room-card
 
 doctype html
 html(lang='ru')
@@ -33,9 +33,11 @@ html(lang='ru')
         .ui-cards__column
           .ui-cards__card
             +booking-card({
-              title: '888',
-                action: '',
-              method: 'GET'
+              action: '',
+              method: 'GET',
+              roomNumber: 888,
+              roomType: 'люкс',
+              roomPrice: '9 900',
             })
           .ui-cards__card
             +login-card({
@@ -44,5 +46,21 @@ html(lang='ru')
         .ui-cards__column
           .ui-cards__air
           .ui-cards__room
-            +room-card()
-            +room-card()
+            .ui-cards__card
+              +room-card({
+                images: [888, 352, 444, 450],
+                glideBtnActive: true,
+                roomNumber: 888,
+                roomType: 'люкс',
+                roomPrice: '9 900',
+                roomRating: 5,
+                totalReviews: 145
+              })
+            .ui-cards__card
+              +room-card({
+                images: [840, 352, 444, 450],
+                roomNumber: 840,
+                roomPrice: '9 900',
+                roomRating: 4,
+                totalReviews: 65
+              })

@@ -1,0 +1,23 @@
+include ../../primitives/like/like
+
+mixin comment(options)
+
+  .comment
+    .comment__row
+      img.comment__img(src=require(`../../components/common.blocks/composite/comment/${options.img}.jpg`), alt=options.alt)
+      .comment__column
+        .comment__name=options.name
+        .comment__text=options.activity
+    .comment__row
+      .comment__like
+        if options.likeActive
+          +like({
+            heart: 'favorite',
+            quantity: options.quantity
+          }).like_active
+        else
+          +like({
+            heart: 'favorite_border',
+            quantity: options.quantity
+          })
+      .comment__text!=options.text

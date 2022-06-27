@@ -1,0 +1,27 @@
+include ../../composite/date-dropdown/date-dropdown
+include ../../primitives/heading/heading
+include ../../composite/dropdown/dropdown
+include ../../primitives/btn/btn
+
+mixin search-card(options)
+  .search-card
+    form.search-card__container(action=options.action, method=options.method)
+      h1.search-card__title=options.title
+      .search-card__date-dropdown
+        +date-dropdown({
+          startValue: '',
+          startTitle: 'прибытие',
+          endValue: '',
+          endTitle: 'выезд',
+        })
+      +heading({title: 'гости'}).search-card__title-drop
+      .search-card__dropdown
+        +dropdown([
+          {title: "взрослые", count: 0},
+          {title: "дети", count: 0},
+          {title: "младенцы", count: 0},
+        ], true)
+      +btn({
+        typeBtn: 'button',
+        title: 'подобрать номер'
+      }).btn_theme-long
