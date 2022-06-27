@@ -1,4 +1,3 @@
-import 'material-icons/iconfont/material-icons.css';
 import Glide from '../../../library.blocks/glide/glide';
 import './glide.scss';
 

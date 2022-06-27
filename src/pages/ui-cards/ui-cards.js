@@ -1,3 +1,4 @@
+import '../../components/library.blocks/material-icons/material-icons';
 import searchCard from '../../components/common.blocks/cards/search-card/search-card';
 import registrationCard from '../../components/common.blocks/cards/registration-card/registration-card';
 import bookingCard from '../../components/common.blocks/cards/booking-card/booking-card';

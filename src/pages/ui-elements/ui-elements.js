@@ -1,3 +1,4 @@
+import '../../components/library.blocks/material-icons/material-icons';
 import { DropdownRooms, DropdownGuests } from '../../components/common.blocks/composite/dropdown/dropdown';
 import dataDrop from '../../components/common.blocks/composite/date-dropdown/date-dropdown';
 import filterDataDrop from '../../components/common.blocks/composite/filter-date-dropdown/filter-date-dropdown';
