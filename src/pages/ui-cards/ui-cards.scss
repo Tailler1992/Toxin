@@ -3,22 +3,6 @@
 @import '../../scss/_var-color';
 @import '../../scss/_var-font';
 
-@import '../../components/common.blocks/primitives/logo/logo';
-@import '../../components/common.blocks/primitives/heading/heading';
-@import '../../components/common.blocks/primitives/text-field/text-field';
-@import '../../components/common.blocks/composite/dropdown/dropdown';
-@import '../../components/common.blocks/composite/date-dropdown/date-dropdown';
-@import '../../components/common.blocks/libraries/air-datepicker/air-datepicker';
-@import '../../components/common.blocks/primitives/btn/btn';
-@import '../../components/common.blocks/primitives/radio/radio';
-@import '../../components/common.blocks/primitives/toggle/toggle';
-
-@import '../../components/common.blocks/cards/search-card/search-card';
-@import '../../components/common.blocks/cards/registration-card/registration-card';
-@import '../../components/common.blocks/cards/booking-card/booking-card';
-@import '../../components/common.blocks/cards/login-card/login-card';
-@import '../../components/common.blocks/cards/room-card/room-card';
-
 html {
   @include html;
 

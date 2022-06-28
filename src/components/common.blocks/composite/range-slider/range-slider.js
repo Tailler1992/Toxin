@@ -1,3 +1,6 @@
+import '../../primitives/heading/heading';
+import './range-slider.scss';
+
 import noUiSlider from '../../libraries/no-ui-slider/no-ui-slider';
 
 const rangeSlider = () => {

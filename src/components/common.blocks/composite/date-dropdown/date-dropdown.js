@@ -1,7 +1,8 @@
-import AirDatepicker from 'air-datepicker';
+import '../../primitives/heading/heading';
+import '../../primitives/text-field/text-field';
+import './date-dropdown.scss';
 
-import 'air-datepicker/air-datepicker.css';
-
+import AirDatepicker from '../../libraries/air-datepicker/air-datepicker';
 import IMask from '../../../library.blocks/imask/imask';
 
 const dateDropdown = (container) => {

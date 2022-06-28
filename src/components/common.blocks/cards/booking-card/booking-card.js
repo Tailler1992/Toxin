@@ -1,3 +1,10 @@
+import '../../primitives/room-info/room-info';
+import '../../composite/date-dropdown/date-dropdown';
+import '../../primitives/heading/heading';
+import '../../composite/dropdown/dropdown';
+import '../../primitives/btn/btn';
+import './booking-card.scss';
+
 import {DropdownGuests} from '../../composite/dropdown/dropdown';
 import dataDrop from '../../composite/date-dropdown/date-dropdown';
 

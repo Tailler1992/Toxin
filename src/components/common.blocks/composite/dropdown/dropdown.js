@@ -1,3 +1,8 @@
+import '../../primitives/text-field/text-field';
+import '../../primitives/heading/heading';
+import '../../primitives/btn/btn';
+import './dropdown.scss';
+
 export default class Dropdown {
   constructor({
     container,

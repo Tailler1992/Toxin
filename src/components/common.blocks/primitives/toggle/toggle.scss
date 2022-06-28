@@ -1,5 +1,7 @@
-.toggle {
+@import '../../../../scss/var-font';
+@import '../../../../scss/var-color';
 
+.toggle {
   &__label {
     display: flex;
     align-items: center;

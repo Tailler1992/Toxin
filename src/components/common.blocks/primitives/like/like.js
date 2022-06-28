@@ -1,3 +1,5 @@
+import './like.scss';
+
 const like = () => {
   const likes = document.querySelectorAll('.like');
 

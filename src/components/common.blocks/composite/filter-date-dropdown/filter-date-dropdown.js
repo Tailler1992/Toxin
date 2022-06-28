@@ -1,5 +1,7 @@
-import AirDatepicker from 'air-datepicker';
-import 'air-datepicker/air-datepicker.css';
+import '../../primitives/text-field/text-field';
+import './filter-date-dropdown.scss';
+
+import AirDatepicker from '../../libraries/air-datepicker/air-datepicker';
 
 const filterDateDropdown = ({ container, startDate = '', endDate = '' }) => {
   const containerSelector = document.querySelector(container);

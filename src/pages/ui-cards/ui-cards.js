@@ -1,11 +1,12 @@
 import '../../components/library.blocks/material-icons/material-icons';
+import '../../components/common.blocks/primitives/logo/logo';
 import searchCard from '../../components/common.blocks/cards/search-card/search-card';
 import registrationCard from '../../components/common.blocks/cards/registration-card/registration-card';
 import bookingCard from '../../components/common.blocks/cards/booking-card/booking-card';
+import '../../components/common.blocks/cards/login-card/login-card';
+import AirDatepicker from '../../components/library.blocks/air-datepicker/air-datepicker';
 import roomCard from '../../components/common.blocks/cards/room-card/room-card';
-
-import AirDatepicker from 'air-datepicker';
-import 'air-datepicker/air-datepicker.css';
+import './ui-cards.scss';
 
 window.addEventListener('DOMContentLoaded', () => {
   searchCard();
@@ -34,5 +35,3 @@ window.addEventListener('DOMContentLoaded', () => {
   dp.$datepicker.style.display = 'block';
   dp.$datepicker.style.top = 0;
 });
-
-import './ui-cards.scss';

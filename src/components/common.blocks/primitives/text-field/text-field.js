@@ -1,3 +1,4 @@
+import './text-field.scss';
 import IMask from '../../../library.blocks/imask/imask';
 
 const textField = (selector) => {

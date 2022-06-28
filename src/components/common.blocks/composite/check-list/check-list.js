@@ -1,3 +1,7 @@
+import '../../primitives/heading/heading';
+import '../../primitives/checkbox/checkbox';
+import './check-list.scss';
+
 const checkList = (checkSelector, isActive) => {
   const checkContainer = document.querySelector(checkSelector);
   const checkBlind = checkContainer.querySelector('.check-list__blind');

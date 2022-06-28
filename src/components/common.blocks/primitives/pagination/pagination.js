@@ -1,3 +1,5 @@
+import './pagination.scss';
+
 const pagination = ({ currentPage = 1, totalPages = 15 } = {}) => {
   const pagination = document.querySelector('.pagination');
   const pagItems = pagination.querySelector('.pagination__items');

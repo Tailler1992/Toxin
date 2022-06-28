@@ -1,3 +1,6 @@
+@import '../../../../scss/var-font';
+@import '../../../../scss/var-color';
+
 .checkbox {
   &:not(:last-child) {
     margin-bottom: 10px;
@@ -29,7 +32,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      content: url("../../components/common.blocks/primitives/checkbox/check.svg");
+      content: url("./check.svg");
       display: none;
     }
   }

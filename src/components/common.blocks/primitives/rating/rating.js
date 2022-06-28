@@ -1,3 +1,5 @@
+import './rating.scss';
+
 const rating = () => {
   const ratings = document.querySelectorAll('.rating');
 

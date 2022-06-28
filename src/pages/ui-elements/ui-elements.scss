@@ -3,30 +3,6 @@
 @import '../../scss/_var-color';
 @import '../../scss/_var-font';
 
-@import '../../components/common.blocks/primitives/logo/logo';
-
-@import '../../components/common.blocks/primitives/heading/heading';
-@import '../../components/common.blocks/primitives/text-field/text-field';
-@import '../../components/common.blocks/composite/dropdown/dropdown';
-@import '../../components/common.blocks/composite/date-dropdown/date-dropdown';
-@import '../../components/common.blocks/composite/filter-date-dropdown/filter-date-dropdown';
-
-@import '../../components/common.blocks/primitives/checkbox/checkbox';
-@import '../../components/common.blocks/primitives/radio/radio';
-@import '../../components/common.blocks/primitives/toggle/toggle';
-@import '../../components/common.blocks/primitives/like/like';
-@import '../../components/common.blocks/primitives/rating/rating';
-
-@import '../../components/common.blocks/primitives/btn/btn';
-@import '../../components/common.blocks/primitives/pagination/pagination';
-@import '../../components/common.blocks/composite/check-list/check-list';
-@import '../../components/common.blocks/primitives/bullet-list/bullet-list';
-
-@import '../../components/common.blocks/primitives/information/information';
-@import '../../components/common.blocks/composite/comment/comment';
-
-@import '../../components/common.blocks/composite/range-slider/range-slider';
-
 html {
   @include html;
 
