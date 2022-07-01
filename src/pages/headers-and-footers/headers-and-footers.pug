@@ -1,0 +1,78 @@
+include ../../components/common.blocks/primitives/logo/logo
+include ../../components/common.blocks/composite/header/header
+include ../../components/common.blocks/composite/footer/footer
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Headers & Footers
+  body
+    .headers-and-footers
+      .headers-and-footers__logo
+        +logo()
+      main.headers-and-footers__container
+        +header({
+          nav: [
+            {linkText: 'О нас', linkHref: '#', linkActive: true},
+            {linkText: 'Услуги', linkHref: '#', linkArrow: true},
+            {linkText: 'Вакансии', linkHref: '#'},
+            {linkText: 'Новости', linkHref: '#'},
+            {linkText: 'Соглашения', linkHref: '#', linkArrow: true},
+          ],
+          firstBtn: {typeBtn: 'link', href: '#', title: 'войти'},
+          secondBtn: {typeBtn: 'link', href: '#', title: 'зарегистрироваться'},
+        }).headers-and-footers__row
+        +header({
+          nav: [
+            {linkText: 'О нас', linkHref: '#', linkActive: true},
+            {linkText: 'Услуги', linkHref: '#', linkArrow: true},
+            {linkText: 'Вакансии', linkHref: '#'},
+            {linkText: 'Новости', linkHref: '#'},
+            {linkText: 'Соглашения', linkHref: '#', linkArrow: true},
+          ],
+          userName: 'Юлий Цезарь',
+          firstBtn: {typeBtn: 'link', href: '#', title: 'войти'},
+          secondBtn: {typeBtn: 'link', href: '#', title: 'зарегистрироваться'},
+        }).headers-and-footers__row
+
+        +footer({
+          descrLogo:
+            `Бронирование номеров в лучшем отеле 2019
+            года по версии ассоциации «Отельные взгляды»`,
+          nav : [{
+              title: 'навигация',
+              link: [
+                {linkHref: '#', linkText: 'О нас'},
+                {linkHref: '#', linkText: 'Новости'},
+                {linkHref:'#', linkText: 'Служба поддержки'},
+                {linkHref:'#', linkText:'Услуги'}
+              ]
+            },
+            {
+              title: 'о нас',
+              link: [
+                {linkHref: '#', linkText: 'О сервисе'},
+                {linkHref: '#', linkText: 'Наша команда'},
+                {linkHref:'#', linkText: 'Вакансии'},
+                {linkHref:'#', linkText:'Инвесторы'}
+              ]
+            },
+            {
+              title: 'Служба поддержки',
+              link: [
+                {linkHref: '#', linkText: 'Соглашения'},
+                {linkHref: '#', linkText: 'Сообщества'},
+                {linkHref:'#', linkText: 'Связь с нами'}
+              ]
+            },],
+          descrSubs:'Получайте специальные предложения и новости сервиса',
+          copyText: 'Copyright © 2018 Toxin отель. Все права защищены.',
+          form: {action: '', method: 'POST'}
+        }).headers-and-footers__row
+
+        +footer({
+          copyText: 'Copyright © 2018 Toxin отель. Все права защищены.',
+        }).footer_mobile
