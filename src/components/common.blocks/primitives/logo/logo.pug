@@ -1,5 +1,5 @@
 mixin logo(color=false)
-  .logo
+  .logo&attributes(attributes)
     if color
       img.logo__img_purple(
         src=require('../../components/common.blocks/primitives/logo/logo.svg'),
