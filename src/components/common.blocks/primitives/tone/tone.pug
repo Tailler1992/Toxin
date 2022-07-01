@@ -1,7 +1,9 @@
-mixin tone(options)
+mixin tone(options = {})
 
-  .tone
-    .tone__color&attributes(attributes)
+  - const {title, id, modClass} = options
+
+  .tone&attributes(attributes)
+    .tone__color(class=modClass ? `tone__color_${modClass}` : '')
     .tone__text
-      h3.tone__title= options.title
-      p.tone__id= options.id
+      h3.tone__title= title
+      p.tone__id= id
