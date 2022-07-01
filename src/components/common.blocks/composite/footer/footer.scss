@@ -1,0 +1,165 @@
+@import '../../../../scss/var-font';
+@import '../../../../scss/var-color';
+
+.footer {
+  background-color: #fff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+  &__container {
+    max-width: 1198px;
+    min-height: 70px;
+    margin: 0 auto;
+    padding: 99px 20px;
+    display: flex;
+    justify-content: space-between;
+
+    &:last-child {
+      padding: 25px 20px 23px;
+      align-items: center;
+    }
+  }
+
+  &__column {}
+
+  &__logo {
+    margin-bottom: 15px;
+  }
+
+  &__description {
+    max-width: 260px;
+    margin-bottom: 23px;
+    line-height: 24px;
+    color: $ds75;
+  }
+
+  &__nav {
+    flex-basis: 600px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    flex-basis: 200px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    &:nth-child(3) {
+      flex-shrink: 0;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 21px;
+    }
+  }
+
+  &__title {
+    margin-top: 4px;
+  }
+
+  &__link {
+    color: $ds50;
+    line-height: 17px;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__subscription-title {
+    margin-top: 4px;
+    margin-bottom: 18px;
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+  }
+
+
+  &__copyright{
+    line-height: 17px;
+  }
+}
+
+.footer_mobile {
+  margin: 0 auto;
+  max-width: 768px;
+
+  .footer__container {
+    justify-content: space-around;
+    padding-top: 120px;
+    padding-bottom: 20px;
+
+    &:last-child {
+      flex-direction: column;
+      padding-top: 0;
+      padding-bottom: 120px;
+    }
+  }
+
+  .footer__logo {
+    margin-bottom: 0;
+  }
+
+  .footer__nav,
+  .footer__description,
+  .footer__subscription,
+  .footer__line {
+    display: none;
+  }
+
+  .footer__copyright {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 991.98px) {
+
+  .footer {
+    &__container {
+      justify-content: space-around;
+    }
+
+    &__nav {
+      display: none;
+    }
+  }
+
+}
+
+@media (max-width: 767.98px) {
+  .footer {
+    &__container {
+      padding-top: 120px;
+      padding-bottom: 20px;
+
+      &:last-child {
+        flex-direction: column;
+        padding-top: 0;
+        padding-bottom: 120px;
+      }
+    }
+
+    &__logo {
+      margin-bottom: 0;
+    }
+
+    &__description,
+    &__subscription,
+    &__line {
+      display: none;
+    }
+
+    &__copyright {
+      margin-bottom: 24px;
+      text-align: center;
+    }
+  }
+}
