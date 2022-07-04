@@ -1,10 +1,13 @@
 include ../../primitives/heading/heading
 include ../../primitives/checkbox/checkbox
 
-mixin check-list(title, content)
-  .check-list
+mixin check-list(options = {})
+  - const {heading, checkbox, modClass} = options
+
+  .check-list&attributes(attributes)
     .check-list__block
-      +heading({title: `${title}`}).check-list__title
-      button.check-list__btn.material-icons expand_more
-    .check-list__blind
-      +checkbox(content)
+      +heading(heading).check-list__title
+      button.check-list__btn.material-icons(class= modClass ? 'check-list__btn_active': '')
+        | expand_more
+    .check-list__blind(class= modClass ? 'check-list__blind_active': '')
+      +checkbox(checkbox)
