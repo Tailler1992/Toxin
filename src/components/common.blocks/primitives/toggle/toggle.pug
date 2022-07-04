@@ -1,7 +1,9 @@
-mixin toggle(content)
-  .toggle
-    each item in content
+mixin toggle(options = {})
+
+  - const {checked, text} = options
+
+  .toggle&attributes(attributes)
       label.toggle__label
-        input.toggle__input(type='checkbox', checked=item.checked)
+        input.toggle__input(type='checkbox', checked=checked)
         .toggle__checkmark
-        .toggle__text=item.text
+        .toggle__text=text

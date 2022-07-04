@@ -7,10 +7,6 @@
     align-items: center;
     cursor: pointer;
     user-select: none;
-
-    &:not(:last-child) {
-      margin-bottom: 14px;
-    }
   }
 
   &__input {
@@ -39,10 +35,6 @@
       display: block;
       background: $ds25;
     }
-  }
-
-  &__text {
-    font-size: 14px;
   }
 
   &__input:checked ~ &__checkmark {
