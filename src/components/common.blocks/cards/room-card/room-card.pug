@@ -2,23 +2,17 @@ include ../../libraries/glide/glide
 include ../../primitives/room-info/room-info
 include ../../primitives/rating/rating
 
-mixin room-card(options)
-  .room-card
+mixin room-card(options = {})
+  - const {glide, roomInfo, roomRating, totalReviews} = options
+
+  .room-card&attributes(attributes)
     .room-card__carousel
-      +glide({
-        images: options.images,
-        glideBtnActive: options.glideBtnActive
-      })
+      +glide(glide)
     .room-card__container
       .room-card__info
-        +room-info({
-          roomNumber: options.roomNumber,
-          roomNumberSmall: options.roomNumberSmall,
-          roomType: options.roomType,
-          roomPrice: options.roomPrice
-          })
+        +room-info(roomInfo)
       .room-card__rating
-        +rating(options.roomRating)
+        +rating(roomRating)
         .room-card__row
-          .room-card__total-reviews=options.totalReviews
+          .room-card__total-reviews=totalReviews
           .room-card__text Отзывов
