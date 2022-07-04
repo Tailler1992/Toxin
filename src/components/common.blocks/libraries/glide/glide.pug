@@ -1,14 +1,24 @@
-mixin glide(options)
-  - let className = options.glideBtnActive ? 'glide__arrows_visible' : '';
+mixin glide(options = {})
+  -
+    const {
+      images = [],
+      glideBtnActive = false
+    } = options
 
   .glide
     .glide__track(data-glide-el='track')
       ul.glide__slides
-        each image in options.images
+        each image in images
           - let imageName = image
           li.glide__slide
-            img.glide__img(src=require(`../../components/common.blocks/cards/room-card/${imageName}.jpg`), alt=`room-${imageName}`)
-    .glide__arrows(data-glide-el='controls' class=className)
+            img.glide__img(
+              src=require(`../../components/common.blocks/cards/room-card/${imageName}.jpg`),
+              alt=`room-${imageName}`
+            )
+    .glide__arrows(
+      data-glide-el='controls'
+      class=glideBtnActive ? 'glide__arrows_visible' : ''
+    )
       button.glide__arrow.glide__arrow--left(data-glide-dir="<")
         .glide__arrow--ico-left.material-icons expand_more
       button.glide__arrow.glide__arrow--right(data-glide-dir=">")
