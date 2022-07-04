@@ -1,7 +1,10 @@
 mixin like(options = {})
 
-  - const {heart, quantity} = options
+  - const {isChecked, quantity} = options
 
-  button.like(type='button')&attributes(attributes)
-    span.like__heart.material-icons=heart
+  button.like(
+    type='button',
+    class= isChecked ? 'like_active' : ''
+  )&attributes(attributes)
+    span.like__heart.material-icons= isChecked ? 'favorite' : 'favorite_border'
     span.like__quantity=quantity
