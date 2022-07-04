@@ -1,11 +1,11 @@
 include ../../primitives/heading/heading
 
-mixin range-slider(options)
+mixin range-slider(options = {})
+
+  - const {heading, rangeDescr} = options
+
   .range-slider
-    +heading({
-      title: `${options.title}`,
-      descr: `${options.price}`
-    }).range-slider__text
+    +heading(heading).range-slider__text
     #range-slider
-    if options.description
-      .range-slider__description=options.description
+    if rangeDescr
+      .range-slider__description=rangeDescr.text
