@@ -1,13 +1,14 @@
-mixin checkbox(content)
-  each item in content
+mixin checkbox(options = [])
+  each item in options
+
+    - const {checked, text, title, description} = item
+
     .checkbox
       label.checkbox__label
-        input.checkbox__input(type="checkbox", checked=item.checked)
+        input.checkbox__input(type="checkbox", checked=checked)
         .checkbox__checkmark
-        if item.text
-          .checkbox__text!=item.text
-        else
-          .checkbox__text
-            .checkbox__title=item.title
-      if item.description
-        .checkbox__description!= item.description
+        .checkbox__text(
+          class=description ? 'checkbox__text_bold' : ''
+        )!=text
+      if description
+        .checkbox__description!= description

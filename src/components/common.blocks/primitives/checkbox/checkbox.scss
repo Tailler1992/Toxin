@@ -40,13 +40,11 @@
   &__text {
     line-height: 18px;
     font-size: 14px;
-  }
 
-  &__title {
-    color: $ds75;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 18px
+    &_bold {
+      color: $ds75;
+      font-weight: 700;
+    }
   }
 
   &__description {
