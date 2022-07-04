@@ -1,10 +1,12 @@
-mixin information(content)
+mixin information(options = [])
   .information
-    each item in content
+    each item in options
+      - const {ico, title, description, isLine} = item
+
       .information__row
-        .information__ico.material-icons=item.ico
+        .information__ico.material-icons=ico
         .information__text
-          .information__title=item.title
-          .information__description=item.description
-      if item.isLine
+          .information__title=title
+          .information__description=description
+      if isLine
         .information__line
