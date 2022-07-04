@@ -1,4 +1,7 @@
-mixin like(options)
-    button&attributes(attributes).like
-        span.like__heart.material-icons=options.heart
-        span.like__quantity=options.quantity
+mixin like(options = {})
+
+  - const {heart, quantity} = options
+
+  button.like(type='button')&attributes(attributes)
+    span.like__heart.material-icons=heart
+    span.like__quantity=quantity
