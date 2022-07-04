@@ -1,13 +1,17 @@
-mixin room-info(options)
+mixin room-info(options = {})
+  -
+    const {
+      roomNumber = '888',
+      modClass = false,
+      roomType = 'люкс',
+      roomPrice = '9 900'
+    } = options
+
   .room-info
-    .room-info__row
+    .room-info__column
       .room-info__symbol №
-      if !options.roomNumberBib
-        .room-info__number=options.roomNumber
-      else
-        .room-info__number.room-info__number_big=options.roomNumber
-      if options.roomType
-        .room-info__type=options.roomType
-    .room-info__row
-      .room-info__price=`${options.roomPrice}₽`
+      .room-info__number(class = modClass ? 'room-info__number_big' : '')=roomNumber
+      .room-info__type=roomType
+    .room-info__column
+      .room-info__price=`${roomPrice}₽`
       .room-info__term в сутки
