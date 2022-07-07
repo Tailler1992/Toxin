@@ -1,9 +1,21 @@
 include ../../primitives/logo/logo
 include ../../primitives/btn/btn
 
-mixin header(options)
+mixin header(options={})
 
-  - const {nav, userName, firstBtn, secondBtn} = options;
+  -
+    const {
+      nav= [
+        {linkText: 'О нас', linkHref: '#', linkActive: true},
+        {linkText: 'Услуги', linkHref: '#', linkArrow: true},
+        {linkText: 'Вакансии', linkHref: '#'},
+        {linkText: 'Новости', linkHref: '#'},
+        {linkText: 'Соглашения', linkHref: '#', linkArrow: true},
+      ],
+      userName,
+      firstBtn= {typeBtn: 'link', href: '#', title: 'войти'},
+      secondBtn={typeBtn: 'link', href: '#', title: 'зарегистрироваться'}
+      } = options;
 
   header.header&attributes(attributes)
     .header__container
