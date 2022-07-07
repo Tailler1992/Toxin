@@ -3,7 +3,7 @@ include ../../components/common.blocks/primitives/heading/heading
 include ../../components/common.blocks/primitives/text-field/text-field
 include ../../components/common.blocks/composite/dropdown/dropdown
 include ../../components/common.blocks/composite/date-dropdown/date-dropdown
-include ../../components/common.blocks/composite/filter-date-dropdown/filter-date-dropdown
+
 include ../../components/common.blocks/primitives/checkbox/checkbox
 include ../../components/common.blocks/primitives/radio/radio
 include ../../components/common.blocks/primitives/toggle/toggle
@@ -34,7 +34,7 @@ html(lang='ru')
             .ui-elements__text-def
               +heading({
                 title: 'Text Field',
-                descr: 'Default'
+                description: 'Default'
               }).ui-elements__title
               +text-field({
                 type: 'email',
@@ -45,7 +45,7 @@ html(lang='ru')
             .ui-elements__text-hov
               +heading({
                 title: 'Text Field',
-                descr: 'Hover / Focus'
+                description: 'Hover / Focus'
               }).ui-elements__title
               +text-field({
                 type: 'text',
@@ -70,15 +70,9 @@ html(lang='ru')
                 data: 'text-mask'
               })
             .ui-elements__date-drop
-              +date-dropdown({
-                startValue: '',
-                startTitle: 'date Dropdown',
-                endValue: '17.08.2022',
-                endTitle: 'date Dropdown',
-              })
+              +date-dropdown()
             .ui-elements__filter-date-drop
-              +heading({title: 'filter date dropdown'}).ui-elements__title
-              +filter-date-dropdown()
+              +date-dropdown()
             .ui-elements__subs
               +heading({
                 title: 'subscription text field'
@@ -106,21 +100,19 @@ html(lang='ru')
               ])
             .ui-elements__toggle
               +heading({title: 'Toggle'}).ui-elements__title-centr
-              +toggle([
-                {text: "Получать спецпредложения", checked: true},
-                {text: "Получать спецпредложения", checked: false}
-              ])
+              +toggle({
+                text: "Получать спецпредложения",
+                checked: true
+              }).ui-elements__toggle-top
+              +toggle({
+                text: "Получать спецпредложения",
+                checked: false
+              })
             .ui-elements__like
               +heading({title: 'like button'}).ui-elements__title-centr
               .ui-elements__like-conteiner
-                +like({
-                  heart: 'favorite_border',
-                  quantity: 2
-                }).ui-elements__like-left
-                +like({
-                  heart: 'favorite',
-                  quantity: 12
-                }).like_active
+                +like({quantity: 2}).ui-elements__like-left
+                +like({isChecked: true, quantity: 12})
             .ui-elements__rating
               +heading({title: 'rate button'}).ui-elements__title-centr
               .ui-elements__rating-conteiner
@@ -129,10 +121,7 @@ html(lang='ru')
 
           .ui-elements__top-column
             .ui-elements__slider
-              +range-slider({
-                title: "Range Slider",
-                price: "5 000₽ - 10 000₽"
-              })
+              +range-slider()
             .ui-elements__btn
               +heading({title: 'buttons'}).ui-elements__title-right
               .ui-elements__btn-row
@@ -178,20 +167,14 @@ html(lang='ru')
         section.ui-elements__dropdowns
           .ui-elements__dropdowns-column
             .ui-elements__drop-room
-              +heading({
-                title: 'dropdown',
-                descr: 'Default'
-              }).ui-elements__drop-title
+              +heading({title: 'dropdown', description: 'Default'}).ui-elements__drop-title
               +dropdown([
                 {title: "спальни", count: 2},
                 {title: "кровати", count: 2},
                 {title: "ванные комнаты", count: 0},
               ])
             .ui-elements__drop-room-active
-              +heading({
-                title: 'dropdown',
-                descr: 'expanded'
-              }).ui-elements__drop-title
+              +heading({title: 'dropdown',description: 'expanded'}).ui-elements__drop-title
               +dropdown([
                 {title: "спальни", count: 2},
                 {title: "кровати", count: 2},
@@ -217,46 +200,29 @@ html(lang='ru')
 
         section.ui-elements__list
           .ui-elements__list-column
-            .ui-elements__checklist
-              +check-list(
-                "expandable checkbox list",
-                [
-                  {text: "Завтрак", checked: false},
-                  {text: "Письменный стол", checked: true},
-                  {text: "Стул для кормления", checked: true},
-                  {text: "Кроватка", checked: true},
-                  {text: "Телевизор", checked: false},
-                  {text: "Шампунь", checked: false},
-                ])
-            .ui-elements__checklist-active
-              +check-list(
-                "expandable checkbox list",
-                [
-                  {text: "Завтрак", checked: false},
-                  {text: "Письменный стол", checked: true},
-                  {text: "Стул для кормления", checked: true},
-                  {text: "Кроватка", checked: true},
-                  {text: "Телевизор", checked: false},
-                  {text: "Шампунь", checked: false},
-                  {text: "Телевизор", checked: false},
-                  {text: "Шампунь", checked: false},
-                ])
+            +check-list().ui-elements__checklist
+            +check-list({modClass: true})
           .ui-elements__list-column
             +heading({title: 'rich Checkbox Buttons'}).ui-elements__list-title
             +checkbox([
               {
-                title: "Широкий коридор",
+                text: "Широкий коридор",
                 checked: false,
                 description: "Ширина коридоров в номере <br> не менее 91 см."
               },
               {
-                title: "Помощник для инвалидов",
+                text: "Помощник для инвалидов",
                 checked: false,
                 description: "На 1 этаже вас встретит специалист <br> и проводит до номера."},
             ])
           .ui-elements__list-column
             +heading({title: 'bullet list'}).ui-elements__list-title-right
-            +bullet-list()
+            +bullet-list([
+              'Нельзя с питомцами',
+              'Без вечеринок и мероприятий',
+              'Время прибытия — после 13:00, а выезд до 12:00',
+              ]
+            )
         section.ui-elements__footer
           .ui-elements__footer-column
             +information([
@@ -279,8 +245,7 @@ html(lang='ru')
                 alt: 'male',
                 name:'Мурад Сарафанов',
                 activity: '5 дней назад',
-                quantity: 12,
-                likeActive: true,
+                like: {isChecked: true, quantity: 12},
                 text: `Великолепный матрас на кровати в основной спальне!
                   А пуфик вообще потрясающий.,<br> И стены, действительно,
                   шумоподавляющие. Выкрикивал комплименты повару —
