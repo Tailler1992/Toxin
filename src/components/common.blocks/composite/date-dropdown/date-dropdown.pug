@@ -1,23 +1,39 @@
 include ../../primitives/heading/heading
 include ../../primitives/text-field/text-field
 
-mixin date-dropdown(options)
+mixin date-dropdown(options = {})
+  -
+    const {
+      startTitle={title: 'date Dropdown'},
+      endTitle={title: 'date Dropdown'},
+      altTitle={title: 'filter date dropdown'},
+    } = options
+
   .date-dropdown
     .date-dropdown__inputs
       .date-dropdown__column
-        +heading({title: options.startTitle}).date-dropdown__title
+        +heading(startTitle).date-dropdown__title
         +text-field({
           type: "text",
           name: "date-field-start",
-          value: options.startValue,
-          btnMore: true
+          btnMore: true,
+          value: 'ДД.ММ.ГГГГ'
         }).date-dropdown__input-start
       .date-dropdown__column
-        +heading({title: options.endTitle}).date-dropdown__title
+        +heading(endTitle).date-dropdown__title
         +text-field({
           type: "text",
           name: "date-field-end",
-          value: options.endValue,
-          btnMore: true
+          btnMore: true,
+          value: 'ДД.ММ.ГГГГ'
         }).date-dropdown__input-end
+    .date-dropdown__filter
+      +heading(altTitle).date-dropdown__title
+      +text-field({
+        type: "text",
+        name: "date-field-alt",
+        btnMore: true,
+        readonly: true,
+        value: 'Укажите даты пребывания'
+      }).date-dropdown__input-alt
     .date-dropdown__datepicker

@@ -21,4 +21,31 @@
     position: relative;
     width: 100%;
   }
+
+  &__input-alt {
+    cursor: pointer;
+
+    & ~ .material-icons{
+      pointer-events: none;
+    }
+    &:hover ~ .material-icons {
+      color: $ds75;
+    }
+    &:focus ~ .material-icons {
+      color: $ds75;
+    }
+  }
+}
+
+
+
+@media (max-width: 600px) {
+
+  .date-dropdown{
+    &__column{
+      &:first-child {
+        //display: none;
+      }
+    }
+  }
 }
