@@ -18,49 +18,22 @@ html(lang='ru')
         +logo()
       main.ui-cards__container
         .ui-cards__column
-          .ui-cards__card
-            +search-card({
-              title: 'Найдём номера под ваши пожелания',
-              action: '',
-              method: 'GET'
-              })
-          .ui-cards__card
-            +registration-card({
-              title: 'Регистрация аккаунта',
-              action: '',
-              method: 'GET'
-            })
+          +search-card().ui-cards__card
+          +registration-card()
         .ui-cards__column
-          .ui-cards__card
-            +booking-card({
-              action: '',
-              method: 'GET',
-              roomNumber: 888,
-              roomType: 'люкс',
-              roomPrice: '9 900',
-            })
-          .ui-cards__card
-            +login-card({
-              title: 'Войти'
-            })
+          +booking-card().ui-cards__card
+          +login-card()
         .ui-cards__column
           .ui-cards__air
-          .ui-cards__room
-            .ui-cards__card
-              +room-card({
-                images: [888, 352, 444, 450],
-                glideBtnActive: true,
-                roomNumber: 888,
-                roomType: 'люкс',
-                roomPrice: '9 900',
-                roomRating: 5,
-                totalReviews: 145
-              })
-            .ui-cards__card
-              +room-card({
-                images: [840, 352, 444, 450],
-                roomNumber: 840,
-                roomPrice: '9 900',
-                roomRating: 4,
-                totalReviews: 65
-              })
+          +room-card({
+            glide: {images: [888, 352, 444, 450], glideBtnActive: true},
+            roomInfo: {roomNumber: '888', roomType: 'люкс', roomPrice: '9 900'},
+            roomRating: 5,
+            totalReviews: 145
+          }).ui-cards__card
+          +room-card({
+            glide: {images: [840, 352, 444, 450]},
+            roomInfo: {roomNumber: '840', roomPrice: '9 900'},
+            roomRating: 4,
+            totalReviews: 65
+          })
