@@ -2,12 +2,26 @@ include ../../primitives/heading/heading
 include ../../primitives/checkbox/checkbox
 
 mixin check-list(options = {})
-  - const {heading, checkbox, modClass} = options
+  -
+    const {
+      heading={title: 'expandable checkbox list'},
+      checkbox=[
+        {text: "Завтрак", checked: false},
+        {text: "Письменный стол", checked: true},
+        {text: "Стул для кормления", checked: true},
+        {text: "Кроватка", checked: true},
+        {text: "Телевизор", checked: false},
+        {text: "Шампунь", checked: false},
+        {text: "Телевизор", checked: false},
+        {text: "Шампунь", checked: false},
+      ],
+      modClass=false
+      } = options
 
   .check-list&attributes(attributes)
     .check-list__block
       +heading(heading).check-list__title
-      button.check-list__btn.material-icons(class= modClass ? 'check-list__btn_active': '')
+      button.check-list__btn.material-icons(class= modClass ? 'check-list__btn_active': '', type='button')
         | expand_more
     .check-list__blind(class= modClass ? 'check-list__blind_active': '')
       +checkbox(checkbox)
