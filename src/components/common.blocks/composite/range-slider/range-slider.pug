@@ -2,10 +2,14 @@ include ../../primitives/heading/heading
 
 mixin range-slider(options = {})
 
-  - const {heading, rangeDescr} = options
+  -
+    const {
+      heading={title: "диапазон цены", description: "5 000₽ - 10 000₽"},
+      rangeDescr,
+    } = options
 
   .range-slider
     +heading(heading).range-slider__text
     #range-slider
     if rangeDescr
-      .range-slider__description=rangeDescr.text
+      .range-slider__description=rangeDescr
