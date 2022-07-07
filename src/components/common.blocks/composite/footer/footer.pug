@@ -3,9 +3,38 @@ include ../../primitives/heading/heading
 include ../../primitives/text-field/text-field
 include ../../primitives/social/social
 
-mixin footer(options)
+mixin footer(options= {})
 
-  - const {descrLogo, nav=[], descrSubs, copyText, form={}} = options;
+  -
+    const {
+      descrLogo= `Бронирование номеров в лучшем отеле 2019
+        года по версии ассоциации «Отельные взгляды»`,
+      nav= [{
+        title: 'навигация',
+        link: [
+          {linkHref: '#', linkText: 'О нас'},
+          {linkHref: '#', linkText: 'Новости'},
+          {linkHref:'#', linkText: 'Служба поддержки'},
+          {linkHref:'#', linkText:'Услуги'}
+        ]}, {
+        title: 'о нас',
+        link: [
+          {linkHref: '#', linkText: 'О сервисе'},
+          {linkHref: '#', linkText: 'Наша команда'},
+          {linkHref:'#', linkText: 'Вакансии'},
+          {linkHref:'#', linkText:'Инвесторы'}
+        ]}, {
+        title: 'Служба поддержки',
+        link: [
+          {linkHref: '#', linkText: 'Соглашения'},
+          {linkHref: '#', linkText: 'Сообщества'},
+          {linkHref:'#', linkText: 'Связь с нами'}
+        ]},
+      ],
+      descrSubs='Получайте специальные предложения и новости сервиса',
+      copyText='Copyright © 2018 Toxin отель. Все права защищены.',
+      form={action: '', method: 'POST'}
+    } = options;
 
   footer.footer&attributes(attributes)
     .footer__container
@@ -25,10 +54,10 @@ mixin footer(options)
         p.footer__description=descrSubs
         form.footer__form(action=form.action, method=form.method)
           +text-field({
-              type: 'email',
-              name: 'subscription',
-              placeholder: 'Email',
-              btnForward: true
+            type: 'email',
+            name: 'subscription',
+            placeholder: 'Email',
+            btnForward: true
             })
     .footer__line
     .footer__container
