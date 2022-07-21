@@ -5,15 +5,17 @@
   position: relative;
   width: 100%;
 
-  &__input{
+  &__input {
     cursor: pointer;
 
-    & ~ .material-icons{
+    & ~ .material-icons {
       pointer-events: none;
     }
+
     &:hover ~ .material-icons {
       color: $ds75;
     }
+
     &:focus ~ .material-icons {
       color: $ds75;
     }
@@ -80,5 +82,5 @@
     justify-content: space-between;
     margin-top: 21px;
     margin-bottom: 6px;
-}
+  }
 }

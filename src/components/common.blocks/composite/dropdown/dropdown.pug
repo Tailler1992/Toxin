@@ -5,9 +5,9 @@ include ../../primitives/btn/btn
 mixin dropdown(content, isBtn)
   .dropdown
     +text-field({
-      type: 'text',
-      name: 'dropdown-text',
-      value: 'Сколько гостей',
+      type: "text",
+      name: "dropdown-text",
+      value: "Сколько гостей",
       btnMore: true,
       readonly: true,
     }).dropdown__input
@@ -22,14 +22,14 @@ mixin dropdown(content, isBtn)
       if isBtn
         .dropdown__text-btns
           +btn({
-            typeBtn: 'button',
-            type: 'button',
-            title: 'очистить',
-            data: 'clear'
+            typeBtn: "button",
+            type: "button",
+            title: "очистить",
+            data: "clear"
           }).btn_theme-no-wrapper
           +btn({
-            typeBtn: 'button',
-            type: 'button',
-            title: 'применить',
-            data: 'apply'
+            typeBtn: "button",
+            type: "button",
+            title: "применить",
+            data: "apply"
           }).btn_theme-no-wrapper
