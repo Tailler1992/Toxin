@@ -5,5 +5,5 @@ mixin toggle(options = {})
   .toggle&attributes(attributes)
       label.toggle__label
         input.toggle__input(type='checkbox', checked=checked)
-        .toggle__checkmark
-        .toggle__text=text
+        span.toggle__checkmark
+        span.toggle__text=text
