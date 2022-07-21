@@ -6,15 +6,15 @@ include ../../primitives/btn/btn
 mixin search-card(options = {})
   -
     const {
-      action='',
-      method='GET',
-      title='Найдём номера под ваши пожелания',
+      action="",
+      method="GET",
+      title="Найдём номера под ваши пожелания",
       dateDrop= {
-          startTitle: {title: 'прибытие'},
-          endTitle: {title: 'выезд'},
+          startTitle: {title: "прибытие"},
+          endTitle: {title: "выезд"},
         },
-      titleDrop = {title: 'гости'},
-      button = {typeBtn: 'button', title: 'подобрать номер'}
+      titleDrop = {title: "гости"},
+      button = {typeBtn: "button", title: "подобрать номер"}
       } = options
 
   .search-card&attributes(attributes)
