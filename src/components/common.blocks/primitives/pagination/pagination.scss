@@ -60,7 +60,7 @@
     }
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
       left: 50%;
@@ -76,13 +76,13 @@
 
     &_prev {
       &::before {
-        content: "\e5c4";
+        content: '\e5c4';
       }
     }
 
     &_next {
       &::before {
-        content: "\e5c8";
+        content: '\e5c8';
       }
     }
   }
