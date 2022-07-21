@@ -18,28 +18,29 @@
     margin-bottom: 20px;
   }
 
-  &__email{
+  &__email {
     margin-bottom: 10px;
   }
 
-  &__password{
+  &__password {
     margin-bottom: 20px;
   }
 
-  &__entry{
+  &__entry {
     margin-bottom: 30px;
   }
-  &__registration{
+
+  &__registration {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &__description{
+
+  &__description {
     color: #000000;
   }
 
-  &__btn-create{
+  &__btn-create {
     padding: 14px 16px;
   }
-
 }

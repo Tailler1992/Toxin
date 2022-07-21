@@ -5,22 +5,22 @@ mixin login-card(options = {})
   -
     const {
       action,
-      method = 'POST',
-      title = 'Войти'
+      method = "POST",
+      title = "Войти"
       } = options
 
   .login-card&attributes(attributes)
     form.login-card__container(action=action, method=method)
       h1.login-card__title=title
       .login-card__email
-        +text-field({type: 'email', name: 'email', placeholder: 'Email'})
+        +text-field({type: "email", name: "email", placeholder: "Email"})
       .login-card__password
-        +text-field({type: 'password', name: 'password', placeholder: 'Пароль'})
+        +text-field({type: "password", name: "password", placeholder: "Пароль"})
       .login-card__entry
-        +btn({typeBtn: 'button', title: 'войти'}).btn_theme-long
+        +btn({typeBtn: "button", title: "войти"}).btn_theme-long
       .login-card__registration
         p.login-card__description
           | Нет аккаунта на Toxin?
         +btn({
-          typeBtn: 'link', href: '#', title: 'создать'
+          typeBtn: "link", href: "#", title: "создать"
         }).btn_theme-hollow.login-card__btn-create
