@@ -10,30 +10,30 @@ mixin footer(options= {})
       descrLogo= `Бронирование номеров в лучшем отеле 2019
         года по версии ассоциации «Отельные взгляды»`,
       nav= [{
-        title: 'навигация',
+        title: "навигация",
         link: [
-          {linkHref: '#', linkText: 'О нас'},
-          {linkHref: '#', linkText: 'Новости'},
-          {linkHref:'#', linkText: 'Служба поддержки'},
-          {linkHref:'#', linkText:'Услуги'}
+          {linkHref: "#", linkText: "О нас"},
+          {linkHref: "#", linkText: "Новости"},
+          {linkHref:"#", linkText: "Служба поддержки"},
+          {linkHref:"#", linkText:"Услуги"}
         ]}, {
-        title: 'о нас',
+        title: "о нас",
         link: [
-          {linkHref: '#', linkText: 'О сервисе'},
-          {linkHref: '#', linkText: 'Наша команда'},
-          {linkHref:'#', linkText: 'Вакансии'},
-          {linkHref:'#', linkText:'Инвесторы'}
+          {linkHref: "#", linkText: "О сервисе"},
+          {linkHref: "#", linkText: "Наша команда"},
+          {linkHref:"#", linkText: "Вакансии"},
+          {linkHref:"#", linkText:"Инвесторы"}
         ]}, {
-        title: 'Служба поддержки',
+        title: "Служба поддержки",
         link: [
-          {linkHref: '#', linkText: 'Соглашения'},
-          {linkHref: '#', linkText: 'Сообщества'},
-          {linkHref:'#', linkText: 'Связь с нами'}
+          {linkHref: "#", linkText: "Соглашения"},
+          {linkHref: "#", linkText: "Сообщества"},
+          {linkHref:"#", linkText: "Связь с нами"}
         ]},
       ],
-      descrSubs='Получайте специальные предложения и новости сервиса',
-      copyText='Copyright © 2018 Toxin отель. Все права защищены.',
-      form={action: '', method: 'POST'}
+      descrSubs="Получайте специальные предложения и новости сервиса",
+      copyText="Copyright © 2018 Toxin отель. Все права защищены.",
+      form={action: "", method: "POST"}
     } = options;
 
   footer.footer&attributes(attributes)
@@ -50,13 +50,13 @@ mixin footer(options= {})
               li.footer__item
                 a.footer__link(href=link.linkHref)=link.linkText
       .footer__subscription
-        +heading({title: 'Подписка'}).footer__subscription-title
+        +heading({title: "Подписка"}).footer__subscription-title
         p.footer__description=descrSubs
         form.footer__form(action=form.action, method=form.method)
           +text-field({
-            type: 'email',
-            name: 'subscription',
-            placeholder: 'Email',
+            type: "email",
+            name: "subscription",
+            placeholder: "Email",
             btnForward: true
             })
     .footer__line
