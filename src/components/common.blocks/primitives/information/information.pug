@@ -1,5 +1,5 @@
 mixin information(options = [])
-  .information
+  .information&attributes(attributes)
     each item in options
       - const {ico, title, description, isLine} = item
 
