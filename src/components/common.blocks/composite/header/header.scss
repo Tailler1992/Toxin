@@ -46,7 +46,7 @@
       padding-right: 26px;
 
       &::before {
-        content: "\e5cf";
+        content: '\e5cf';
         position: absolute;
         top: 50%;
         right: 0;
@@ -78,7 +78,7 @@
   &__burger {
     display: none;
 
-    &:hover{
+    &:hover {
       opacity: 0.7;
     }
   }
@@ -91,7 +91,6 @@
 }
 
 @media (max-width: 991.98px) {
-
   .header {
     &__nav {
       display: none;

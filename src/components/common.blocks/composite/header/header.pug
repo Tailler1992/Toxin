@@ -6,15 +6,15 @@ mixin header(options={})
   -
     const {
       nav= [
-        {linkText: 'О нас', linkHref: '#', linkActive: true},
-        {linkText: 'Услуги', linkHref: '#', linkArrow: true},
-        {linkText: 'Вакансии', linkHref: '#'},
-        {linkText: 'Новости', linkHref: '#'},
-        {linkText: 'Соглашения', linkHref: '#', linkArrow: true},
+        {linkText: "О нас", linkHref: "#", linkActive: true},
+        {linkText: "Услуги", linkHref: "#", linkArrow: true},
+        {linkText: "Вакансии", linkHref: "#"},
+        {linkText: "Новости", linkHref: "#"},
+        {linkText: "Соглашения", linkHref: "#", linkArrow: true},
       ],
       userName,
-      firstBtn= {typeBtn: 'link', href: '#', title: 'войти'},
-      secondBtn={typeBtn: 'link', href: '#', title: 'зарегистрироваться'}
+      firstBtn= {typeBtn: "link", href: "#", title: "войти"},
+      secondBtn={typeBtn: "link", href: "#", title: "зарегистрироваться"}
       } = options;
 
   header.header&attributes(attributes)
@@ -25,8 +25,8 @@ mixin header(options={})
         nav.header__nav
           ul.header__list
             each item in nav
-              - const active = item.linkActive ? 'header__link_active' : ''
-              - const arrow = item.linkArrow ? 'header__link_arrow' : ''
+              - const active = item.linkActive ? "header__link_active" : ""
+              - const arrow = item.linkArrow ? "header__link_arrow" : ""
 
               li.header__item
                 a.header__link(href=item.linkHref class=`${active} ${arrow}`)=item.linkText
