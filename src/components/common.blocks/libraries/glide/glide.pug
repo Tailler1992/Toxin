@@ -6,7 +6,7 @@ mixin glide(options = {})
     } = options
 
   .glide
-    .glide__track(data-glide-el='track')
+    .glide__track(data-glide-el="track")
       ul.glide__slides
         each image in images
           - let imageName = image
@@ -16,8 +16,8 @@ mixin glide(options = {})
               alt=`room-${imageName}`
             )
     .glide__arrows(
-      data-glide-el='controls'
-      class=glideBtnActive ? 'glide__arrows_visible' : ''
+      data-glide-el="controls"
+      class=glideBtnActive ? "glide__arrows_visible" : ""
     )
       button.glide__arrow.glide__arrow--left(data-glide-dir="<")
         .glide__arrow--ico-left.material-icons expand_more
