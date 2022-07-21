@@ -13,7 +13,7 @@
     }
   }
 
-  &__title{
+  &__title {
     margin-bottom: 5px;
   }
 
@@ -25,27 +25,16 @@
   &__input-alt {
     cursor: pointer;
 
-    & ~ .material-icons{
+    & ~ .material-icons {
       pointer-events: none;
     }
+
     &:hover ~ .material-icons {
       color: $ds75;
     }
+
     &:focus ~ .material-icons {
       color: $ds75;
-    }
-  }
-}
-
-
-
-@media (max-width: 600px) {
-
-  .date-dropdown{
-    &__column{
-      &:first-child {
-        //display: none;
-      }
     }
   }
 }

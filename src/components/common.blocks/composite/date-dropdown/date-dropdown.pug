@@ -4,9 +4,9 @@ include ../../primitives/text-field/text-field
 mixin date-dropdown(options = {})
   -
     const {
-      startTitle={title: 'date Dropdown'},
-      endTitle={title: 'date Dropdown'},
-      altTitle={title: 'filter date dropdown'},
+      startTitle={title: "date Dropdown"},
+      endTitle={title: "date Dropdown"},
+      altTitle={title: "filter date dropdown"},
     } = options
 
   .date-dropdown
@@ -17,7 +17,7 @@ mixin date-dropdown(options = {})
           type: "text",
           name: "date-field-start",
           btnMore: true,
-          value: 'ДД.ММ.ГГГГ'
+          value: "ДД.ММ.ГГГГ"
         }).date-dropdown__input-start
       .date-dropdown__column
         +heading(endTitle).date-dropdown__title
@@ -25,7 +25,7 @@ mixin date-dropdown(options = {})
           type: "text",
           name: "date-field-end",
           btnMore: true,
-          value: 'ДД.ММ.ГГГГ'
+          value: "ДД.ММ.ГГГГ"
         }).date-dropdown__input-end
     .date-dropdown__filter
       +heading(altTitle).date-dropdown__title
@@ -34,6 +34,6 @@ mixin date-dropdown(options = {})
         name: "date-field-alt",
         btnMore: true,
         readonly: true,
-        value: 'Укажите даты пребывания'
+        value: "Укажите даты пребывания"
       }).date-dropdown__input-alt
     .date-dropdown__datepicker
