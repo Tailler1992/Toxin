@@ -9,7 +9,7 @@
     position: relative;
 
     &::before {
-      content: "\e83a\e83a\e83a\e83a\e83a";
+      content: '\e83a\e83a\e83a\e83a\e83a';
       display: block;
       background: $main-gr100;
       -webkit-background-clip: text;
@@ -28,7 +28,7 @@
     overflow: hidden;
 
     &::before {
-      content: "\e838\e838\e838\e838\e838";
+      content: '\e838\e838\e838\e838\e838';
       display: block;
       background: $main-gr100;
       -webkit-background-clip: text;
