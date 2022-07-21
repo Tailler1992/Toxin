@@ -1,16 +1,16 @@
 mixin room-info(options = {})
   -
     const {
-      roomNumber = '888',
+      roomNumber = "888",
       modClass = false,
-      roomType = '',
-      roomPrice = '9 900'
+      roomType = "",
+      roomPrice = "9 900"
     } = options
 
   .room-info
     .room-info__column
       .room-info__symbol №
-      .room-info__number(class = modClass ? 'room-info__number_big' : '')=roomNumber
+      .room-info__number(class = modClass ? "room-info__number_big" : "")=roomNumber
       .room-info__type=roomType
     .room-info__column
       .room-info__price=`${roomPrice}₽`
