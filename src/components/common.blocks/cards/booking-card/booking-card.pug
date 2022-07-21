@@ -7,24 +7,24 @@ include ../../primitives/btn/btn
 mixin booking-card(options = {})
   -
     const {
-      action='',
-      method='GET',
-      title='Регистрация аккаунта',
+      action="",
+      method="GET",
+      title="Регистрация аккаунта",
       roomInfo= {
-        roomNumber: '888',
-        roomType: 'люкс',
-        roomPrice: '9 900',
+        roomNumber: "888",
+        roomType: "люкс",
+        roomPrice: "9 900",
         modClass: true
       },
       dateDrop= {
-        startTitle: {title: 'прибытие'},
-        endTitle: {title: 'выезд'},
+        startTitle: {title: "прибытие"},
+        endTitle: {title: "выезд"},
       },
-      titleDrop = {title: 'гости'},
-      resultSum='38 081₽',
+      titleDrop = {title: "гости"},
+      resultSum="38 081₽",
       button = {
-        typeBtn: 'button',
-        title: 'забронировать'
+        typeBtn: "button",
+        title: "забронировать"
       }
     } = options
 

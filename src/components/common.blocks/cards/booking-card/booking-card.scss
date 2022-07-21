@@ -28,7 +28,7 @@
     }
   }
 
-  &__cost-container{
+  &__cost-container {
     margin-bottom: 32px;
   }
 
@@ -37,7 +37,7 @@
     justify-content: space-between;
     align-items: baseline;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 15px;
     }
   }
@@ -104,12 +104,8 @@
     color: $ds100;
   }
 
-  &__result-line{
+  &__result-line {
     flex: 1 0 auto;
     border-bottom: 1px dashed $ds25;
   }
-
-
-
-
 }
