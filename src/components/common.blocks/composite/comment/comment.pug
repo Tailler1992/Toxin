@@ -3,7 +3,7 @@ include ../../primitives/like/like
 mixin comment(options = {})
   - const {img, alt, name, activity, like, text} = options
 
-  .comment
+  .comment&attributes(attributes)
     .comment__row
       img.comment__img(src=require(`../../components/common.blocks/composite/comment/${img}.jpg`), alt=alt)
       .comment__column
