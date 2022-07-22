@@ -9,7 +9,14 @@ html {
   background-color: #FFF;
 }
 
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 .sign-in {
+  flex: 1 0 auto;
   background: url('./sign-in-background.jpg') no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -17,7 +24,7 @@ html {
   &__container {
     max-width: 1198px;
     margin: 0 auto;
-    
+
   }
 
   &__form {
@@ -27,10 +34,4 @@ html {
   }
 }
 
-@media (max-width: 400px){
-  .sign-in {
-    &__container {
 
-    }
-  }
-}
