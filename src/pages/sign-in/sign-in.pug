@@ -1,0 +1,19 @@
+include ../../components/common.blocks/composite/header/header
+include ../../components/common.blocks/cards/login-card/login-card
+
+include ../../components/common.blocks/composite/footer/footer
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Sign-in
+  body
+    +header()
+    main.sign-in
+      .sign-in__container
+        .sign-in__form
+          +login-card()
+    +footer()
