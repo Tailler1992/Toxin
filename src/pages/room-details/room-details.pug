@@ -1,0 +1,99 @@
+include ../../components/common.blocks/composite/header/header
+include ../../components/common.blocks/primitives/information/information
+include ../../components/common.blocks/primitives/pie-chart/pie-chart
+include ../../components/common.blocks/composite/comment/comment
+include ../../components/common.blocks/primitives/bullet-list/bullet-list
+include ../../components/common.blocks/cards/booking-card/booking-card
+include ../../components/common.blocks/composite/footer/footer
+
+
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Room details
+  body.body
+    +header()
+    main.room-details
+      .room-details__gallery
+        .room-details__first-fhoto
+          img.room-details__img(src=require('./first-room-photo.jpg'), alt='first-room-photo')
+        .room-details__fhoto-column
+          .room-details__second-fhoto
+            img.room-details__img(src=require('./second-room-photo.jpg'), alt='second-room-photo')
+          .room-details__third-fhoto
+            img.room-details__img(src=require('./third-room-photo.jpg'), alt='third-room-photo')
+      .room-details__container
+        .room-details__info
+          .room-details__row
+            .room-details__information
+              .room-details__title Сведения о номере
+              +information([
+                {
+                  ico:'insert_emoticon',
+                  title:'Комфорт',
+                  description:'Шумопоглощающие стены',
+                  isLine: true
+                },
+                {
+                  ico:'location_city',
+                  title:'Удобство',
+                  description:'Окно в каждой из спален',
+                  isLine: true
+                },
+                {
+                  ico:'whatshot',
+                  title:'Уют',
+                  description:'Номер оснащен камином'
+                },
+              ]).room-details__info-block
+            .room-details__pie-chart
+              .room-details__title Впечатления от номера
+              +pie-chart().room-details__pie-chart-block
+
+          .room-details__comments
+            .room-details__row
+              .room-details__title Отзывы посетителей номера
+              .room-details__number-of-reviews 2 отзыва
+            +comment({
+              img: 'male',
+              alt: 'male',
+              name:'Мурад Сарафанов',
+              activity: '5 дней назад',
+              like: {isChecked: true, quantity: 12},
+              text: `Великолепный матрас на кровати в основной спальне!
+                А пуфик вообще потрясающий.<br> И стены, действительно,
+                шумоподавляющие. Выкрикивал комплименты повару —
+                никто <br> не жаловался из соседей.`
+              }).room-details__comment
+            +comment({
+              img: 'woman',
+              alt: 'woman',
+              name:'Патрисия Стёклышкова',
+              activity: 'Неделю назад',
+              like: {quantity: 2},
+              text: `Обслуживание на высоте! Всё аккуратно, чисто.
+                Завтраки в номер советую заказать,<br>
+                каждый день новое блюдо и десерт как комплимент`
+              }).room-details__comment
+          .room-details__row
+            .room-details__rules
+              .room-details__title.room-details__rule-title Правила
+              +bullet-list([
+                'Нельзя с питомцами',
+                'Без вечеринок и мероприятий',
+                'Время прибытия — после 13:00, а выезд до 12:00',
+                ]
+              )
+            .room-details__cancel
+              .room-details__title.room-details__cancel-title  Отмена
+              p.room-details__text
+                | Бесплатная отмена в течение 48 ч.
+                | После этого при отмене не позднее чем за 5 дн. до прибытия
+                | вы получите полный возврат за вычетом сбора за услуги.
+        .room-details__card
+          +booking-card()
+    +footer()
