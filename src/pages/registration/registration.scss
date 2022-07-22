@@ -9,7 +9,14 @@ html {
   background-color: #FFF;
 }
 
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 .registration {
+  flex: 1 0 auto;
   background: url('./registration-background.jpg') no-repeat;
   background-size: cover;
   background-position: bottom;
