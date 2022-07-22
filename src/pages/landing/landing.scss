@@ -1,0 +1,39 @@
+@import '../../scss/_fonts';
+@import '../../scss/_nullstyle';
+@import '../../scss/_var-color';
+@import '../../scss/_var-font';
+
+html {
+  @include html;
+
+  background-color: #FFF;
+}
+
+.landing {
+  background: url('./landing-background.jpg') no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  &__container {
+    max-width: 1198px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__form {
+    padding-top: 70px;
+    padding-bottom: 316px;
+  }
+
+  &__text{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 22px;
+  }
+
+  &__description {
+    max-width: 300px;
+    text-align: right;
+    line-height: 24px;
+  }
+}
