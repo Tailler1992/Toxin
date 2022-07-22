@@ -1,0 +1,142 @@
+include ../../components/common.blocks/composite/header/header
+include ../../components/common.blocks/primitives/heading/heading
+include ../../components/common.blocks/composite/date-dropdown/date-dropdown
+include ../../components/common.blocks/composite/dropdown/dropdown
+include ../../components/common.blocks/composite/range-slider/range-slider
+include ../../components/common.blocks/primitives/checkbox/checkbox
+include ../../components/common.blocks/composite/check-list/check-list
+include ../../components/common.blocks/cards/room-card/room-card
+include ../../components/common.blocks/primitives/pagination/pagination
+include ../../components/common.blocks/composite/footer/footer
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Registration
+  body.body
+    +header()
+    main.search-room
+      .search-room__container
+        form.search-room__form
+          .search-room__filter-date-dropdown
+            +date-dropdown({altTitle: {title: 'даты пребывания в отеле'}})
+          .search-room__guests-drop
+            +heading({title: 'гости'}).search-room__form-title
+            +dropdown([
+              {title: "взрослые", count: 2},
+              {title: "дети", count: 0},
+              {title: "младенцы", count: 1},
+            ], true)
+          .search-room__range-slider
+            +range-slider({rangeDescr: 'Стоимость за сутки пребывания в номере'})
+          .search-room__checkbox
+            +heading({title: 'правила дома'}).search-room__check-title
+            +checkbox([
+              {text: "Можно курить", checked: false},
+              {text: "Можно с питомцами", checked: true},
+              {text: "Можно пригласить гостей <br> (до 10 человек)", checked: true}
+            ])
+          .search-room__rich-checkbox
+            +heading({title: 'доступность'}).search-room__check-title
+            +checkbox([
+              {
+                text: "Широкий коридор",
+                checked: false,
+                description: "Ширина коридоров в номере <br> не менее 91 см."
+              },
+              {
+                text: "Помощник для инвалидов",
+                checked: false,
+                description: "На 1 этаже вас встретит специалист <br> и проводит до номера."},
+            ])
+          .search-room__drop-room
+            +heading({title: 'удобства номера'}).search-room__drop-title
+            +dropdown([
+              {title: "спальни", count: 2},
+              {title: "кровати", count: 2},
+              {title: "ванные комнаты", count: 0},
+            ])
+          .search-room__checklist
+            +check-list({heading: {title: 'дополнительные удобства'}})
+
+        .search-room__cards
+          h1.search-room__cards-title Номера, которые мы для вас подобрали
+          .search-room__cards-container
+            +room-card({
+              glide: {images: [888, 352, 444, 450]},
+              roomInfo: {roomNumber: '888', roomType: 'люкс', roomPrice: '9 900'},
+              roomRating: 5,
+              totalReviews: 145
+            })
+            +room-card({
+              glide: {images: [840, 352, 444, 450]},
+              roomInfo: {roomNumber: '840', roomPrice: '9 900'},
+              roomRating: 4,
+              totalReviews: 65
+            })
+            +room-card({
+              glide: {images: [980, 352, 444, 450]},
+              roomInfo: {roomNumber: '980', roomType: 'люкс', roomPrice: '8 500'},
+              roomRating: 3,
+              totalReviews: 35
+            })
+            +room-card({
+              glide: {images: [856, 352, 444, 450]},
+              roomInfo: {roomNumber: '856', roomPrice: '7 300'},
+              roomRating: 5,
+              totalReviews: 19
+            })
+            +room-card({
+              glide: {images: [740, 352, 444, 450]},
+              roomInfo: {roomNumber: '740', roomPrice: '6 000'},
+              roomRating: 4,
+              totalReviews: 44
+            })
+            +room-card({
+              glide: {images: [982, 352, 444, 450]},
+              roomInfo: {roomNumber: '982', roomPrice: '5 800'},
+              roomRating: 3,
+              totalReviews: 56
+            })
+            +room-card({
+              glide: {images: [678, 352, 444, 450]},
+              roomInfo: {roomNumber: '678', roomPrice: '5 500'},
+              roomRating: 5,
+              totalReviews: 45
+            })
+            +room-card({
+              glide: {images: [450, 352, 444, 450]},
+              roomInfo: {roomNumber: '450', roomPrice: '5 300'},
+              roomRating: 4,
+              totalReviews: 39
+            })
+            +room-card({
+              glide: {images: [350, 352, 444, 450]},
+              roomInfo: {roomNumber: '350', roomPrice: '5 000'},
+              roomRating: 3,
+              totalReviews: 77
+            })
+            +room-card({
+              glide: {images: [666, 352, 444, 450]},
+              roomInfo: {roomNumber: '666', roomPrice: '5 000'},
+              roomRating: 5,
+              totalReviews: 25
+            })
+            +room-card({
+              glide: {images: [444, 352, 444, 450]},
+              roomInfo: {roomNumber: '444', roomPrice: '5 000'},
+              roomRating: 3,
+              totalReviews: 15
+            })
+            +room-card({
+              glide: {images: [352, 352, 444, 450]},
+              roomInfo: {roomNumber: '352', roomPrice: '5 000'},
+              roomRating: 3,
+              totalReviews: 55
+            })
+          .search-room__pagination
+            +pagination()
+    +footer()

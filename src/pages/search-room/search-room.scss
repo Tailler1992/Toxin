@@ -1,0 +1,95 @@
+@import '../../scss/_fonts';
+@import '../../scss/_nullstyle';
+@import '../../scss/_var-color';
+@import '../../scss/_var-font';
+
+html {
+  @include html;
+
+  background-color: #FFF;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.search-room {
+  flex: 1 0 auto;
+  border-bottom: 1px solid #e5e5e5;
+  
+  &__container {
+    max-width: 1198px;
+    display: flex;
+    margin: 0 auto;
+    padding: 30px 20px 77px;
+  }
+
+  &__form {
+    max-width: 266px;
+    width: 100%;
+    margin-right: 60px;
+  }
+
+  &__form-title {
+    margin-bottom: 5px;
+  }
+
+  &__filter-date-dropdown {
+    margin-bottom: 20px;
+  }
+
+  &__guests-drop {
+    margin-bottom: 30px;
+  }
+
+  &__range-slider {
+    margin-bottom: 30px;
+  }
+
+  &__checkbox {
+    margin-bottom: 32px;
+  }
+
+  &__check-title {
+    margin-bottom: 17px;
+  }
+
+  &__rich-checkbox {
+    margin-bottom: 30px;
+  }
+
+  &__drop-room {
+    margin-bottom: 14px;
+  }
+
+  &__drop-title{
+    margin-bottom: 5px;
+  }
+
+  &__cards {
+    width: 100%;
+  }
+
+  &__cards-title {
+    @include h1;
+
+    margin-bottom: 21px;
+  }
+
+  &__cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    column-gap: 12px;
+    row-gap: 20px;
+  }
+
+  &__pagination {
+    margin-top: 45px;
+    margin-right: 11px;
+    display: flex;
+    justify-content: center;
+  }
+}
