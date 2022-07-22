@@ -1,0 +1,28 @@
+@import '../../scss/_fonts';
+@import '../../scss/_nullstyle';
+@import '../../scss/_var-color';
+@import '../../scss/_var-font';
+
+html {
+  @include html;
+
+  background-color: #FFF;
+}
+
+.registration {
+  background: url('./registration-background.jpg') no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  &__container {
+    max-width: 1198px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 18px 5px;
+  }
+}
