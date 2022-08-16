@@ -1,6 +1,0 @@
-mixin btn(options)
-  case options.type
-    when "link"
-      a.btn&attributes(attributes)(href=options.href)= options.title
-    when "button"
-      button.btn&attributes(attributes)()= options.title

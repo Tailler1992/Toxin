@@ -1,0 +1,288 @@
+@import '../../../../scss/_var-color';
+@import '../../../../scss/_var-font';
+
+.air-datepicker {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  font-family: $ff;
+  box-sizing: border-box;
+
+  --adp-font-size: 12px;
+  --adp-cell-border-radius: 50%;
+  --adp-padding: 14px 15px 27px;
+  --adp-day-cell-width: 40px;
+  --adp-day-cell-height: 40px;
+  --adp-background-color-in-range: #FFFFFF;
+  --adp-background-color-in-range-focused: #FFFFFF;
+  --adp-color-other-month: #1f204140;
+  --adp-color-disabled: rgba(31, 32, 65, 0.5);
+  --adp-color-current-date: #FFFFFF;
+  --adp-color: rgba(31, 32, 65, 0.5);
+  --adp-day-name-color: #BC9CFF;
+  --adp-day-name-color-hover: #BB9CFFBF;
+  --adp-background-color-hover: linear-gradient(180deg, #BB9CFF80 0%, #8BA4F980 100%);
+  --adp-cell-background-color-selected: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  --adp-cell-background-color-selected-hover: linear-gradient(180deg, #BB9CFFBF 0%, #8BA4F9BF 100%);
+  --adp-cell-background-color-in-range: linear-gradient(180deg, #BB9CFF40 0%, #8BA4F940 100%);
+  --adp-cell-background-color-in-range-hover: linear-gradient(180deg, #BB9CFF40 0%, #8BA4F940 100%);
+  --adp-cell-border-color-in-range: none;
+  --adp-background-color-selected-other-month: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  --adp-background-color-selected-other-month-focused: linear-gradient(180deg, #BB9CFFBF 0%, #8BA4F9BF 100%);
+  --adp-color-other-month-hover: #FFFFFF;
+  --adp-btn-height: auto;
+  --adp-btn-color: #BC9CFF;
+  --adp-btn-color-hover: #1F204180;
+  --adp-btn-background-color-hover: none;
+  --adp-btn-background-color-active: none;
+
+
+  &.-inline- {
+    position: absolute;
+    top: 15px;
+    display: none;
+
+    &.-active- {
+      display: block;
+    }
+  }
+
+  &--pointer {
+    display: none;
+  }
+
+  &-nav {
+    border-bottom: none;
+
+    &--action {
+      color: #BC9CFF;
+
+      &:hover {
+        background: #FFFFFF;
+        color: $ds50;
+      }
+    }
+
+    &--title {
+      font-size: 19px;
+      font-weight: 700;
+      color: $ds100;
+
+      &:hover {
+        background: #FFFFFF;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &--content {
+    padding: 0 19.7px 0 20.9px;
+  }
+
+  &-body {
+    &--day-names {
+      margin: 0;
+    }
+
+    &--day-name {
+      height: 40px;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: none;
+    }
+
+    &--cells {
+      justify-content: center;
+
+      &.-days- {
+        grid-template-columns: repeat(7, 40px);
+        grid-auto-rows: 40px;
+      }
+
+      &.-months- {
+        justify-content: center;
+        grid-template-columns: repeat(4, 60px);
+        grid-auto-rows: 60px;
+      }
+
+      &.-years- {
+        justify-content: center;
+        grid-template-columns: repeat(4, 60px);
+        grid-auto-rows: 60px;
+      }
+    }
+  }
+
+  &-cell {
+
+    &.-current- {
+      font-weight: 700;
+      background: $secondary-gr100;
+
+      &.-focus- {
+        color: #FFFFFF;
+        background: $secondary-gr75;
+
+        &.-range-from- {
+          background: $main-gr100;
+
+          &.-focus- {
+            background: $main-gr75;
+          }
+        }
+      }
+
+      &.-in-range- {
+        border-radius: 50%;
+        background: $main-gr100;
+        color: #FFFFFF;
+
+        &::before {
+          content: '';
+          position: absolute;
+          z-index: -2;
+          right: 0;
+          border-radius: 50% 0 0 50%;
+          width: 100%;
+          height: 100%;
+          background: $main-gr25;
+        }
+      }
+    }
+
+    &.-disabled- {
+      &.-range-from- {
+        color: $ds50;
+        background: #FFFFFF;
+        font-weight: 400;
+
+        &.-other-month- {
+          color: $ds25;
+        }
+      }
+
+      &.-focus- {
+        color: $ds50;
+        background: $main-gr5;
+        font-weight: 400;
+      }
+
+      &.-in-range- {
+        color: $ds50;
+        background: #FFFFFF;
+
+        &.-other-month- {
+          color: $ds25;
+        }
+      }
+
+      &.-current- {
+        &.-focus- {
+          color: $ds25;
+        }
+      }
+    }
+
+    &.-range-from-,
+    &.-range-to- {
+      color: #FFFFFF;
+      background: $main-gr100;
+      border-radius: 50%;
+      font-weight: 700;
+
+      &.-other-month- {
+        color: #FFFFFF
+      }
+    }
+
+    &.-day- {
+      &.-range-from- {
+        &:not(.-disabled-, .-range-to-) {
+          &::before {
+            content: '';
+            position: absolute;
+            z-index: -2;
+            right: 0;
+            border-radius: 50% 0 0 50%;
+            width: 100%;
+            height: 100%;
+            background: $main-gr25;
+          }
+        }
+      }
+
+      &.-range-to- {
+        &:not(.-disabled-, .-range-from-, .-min-date-) {
+          &::before {
+            content: '';
+            position: absolute;
+            z-index: -2;
+            right: 0;
+            border-radius: 0 50% 50% 0;
+            width: 100%;
+            height: 100%;
+            background: $main-gr25;
+          }
+        }
+
+      }
+    }
+  }
+
+  &--buttons {
+    padding: 20.44px 20px 20px;
+    border-top: none;
+  }
+
+  &-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-button {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &.-mini- {
+    --adp-day-cell-width: 33px;
+    --adp-day-cell-height: 33px;
+    --adp-padding: 14px 15px 20px;
+
+    & .air-datepicker {
+      &-nav--title {
+        font-size: 17px;
+      }
+
+      &--content {
+        padding: 0 15px;
+      }
+
+      &-body {
+        &--day-name {
+          height: 33px;
+        }
+
+        &--cells {
+          &.-days- {
+            grid-template-columns: repeat(7, 33px);
+            grid-auto-rows: 33px;
+          }
+
+          &.-months- {
+            grid-template-columns: repeat(4, 50px);
+            grid-auto-rows: 50px;
+          }
+
+          &.-years- {
+            grid-template-columns: repeat(4, 50px);
+            grid-auto-rows: 50px;
+          }
+        }
+      }
+    }
+  }
+}

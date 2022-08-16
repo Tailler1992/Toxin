@@ -1,7 +1,0 @@
-mixin check-list(title, content)
-  .check-list
-    .check-list__block
-      +heading({title: `${title}`}).check-list__title
-      button.check-list__btn.material-icons expand_more
-    .check-list__blind
-      +checkbox(content)

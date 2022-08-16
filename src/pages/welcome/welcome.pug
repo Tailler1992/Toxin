@@ -1,0 +1,39 @@
+include ../../components/common.blocks/primitives/logo/logo
+include ../../components/common.blocks/primitives/heading/heading
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Welcome page
+  body
+  .welcome
+    .welcome__logo
+        +logo()
+    main.welcome__container
+      .welcome__ui
+        +heading({title: 'UI kit'}).welcome__title
+        ul.welcome__list
+          li.welcome__item
+            a.welcome__link(href="./ui-colors.html") Colors & Type
+          li.welcome__item
+            a.welcome__link(href="./ui-elements.html") Form Elements
+          li.welcome__item
+            a.welcome__link(href="./ui-cards.html") Cards
+          li.welcome__item
+            a.welcome__link(href="./headers-and-footers.html") Headers & Footers
+      .welcome__page
+        +heading({title: 'Website pages'}).welcome__title
+        ul.welcome__list
+          li.welcome__item
+            a.welcome__link(href="./landing.html") Landing page
+          li.welcome__item
+            a.welcome__link(href="./search-room.html") Search room
+          li.welcome__item
+            a.welcome__link(href="./room-details.html") Room details
+          li.welcome__item
+            a.welcome__link(href="./registration.html") Registration
+          li.welcome__item
+            a.welcome__link(href="./sign-in.html") Sign in

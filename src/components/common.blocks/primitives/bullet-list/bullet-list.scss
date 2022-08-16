@@ -1,0 +1,27 @@
+@import '../../../../scss/var-font';
+@import '../../../../scss/var-color';
+
+.bullet-list {
+  &__item {
+    position: relative;
+    padding-left: 21px;
+    font-size: 14px;
+    line-height: 24px;
+    color: $ds75;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &:before {
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 10.43px;
+      height: 10px;
+      content: '';
+      background: $ds25;
+      border-radius: 50%;
+    }
+  }
+}

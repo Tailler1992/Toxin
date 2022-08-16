@@ -1,0 +1,32 @@
+include ../../composite/date-dropdown/date-dropdown
+include ../../primitives/heading/heading
+include ../../composite/dropdown/dropdown
+include ../../primitives/btn/btn
+
+mixin search-card(options = {})
+  -
+    const {
+      action="",
+      method="GET",
+      title="Найдём номера под ваши пожелания",
+      dateDrop= {
+          startTitle: {title: "прибытие"},
+          endTitle: {title: "выезд"},
+        },
+      titleDrop = {title: "гости"},
+      button = {typeBtn: "button", title: "подобрать номер"}
+      } = options
+
+  .search-card&attributes(attributes)
+    form.search-card__container(action=action, method=method)
+      h1.search-card__title=title
+      .search-card__date-dropdown
+        +date-dropdown(dateDrop)
+      +heading(titleDrop).search-card__title-drop
+      .search-card__dropdown
+        +dropdown([
+          {title: "взрослые", count: 0},
+          {title: "дети", count: 0},
+          {title: "младенцы", count: 0},
+        ], true)
+      +btn(button).btn_theme-long

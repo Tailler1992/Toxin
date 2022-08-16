@@ -1,0 +1,95 @@
+@import '../../../../scss/var-font';
+@import '../../../../scss/var-color';
+
+.pagination {
+  display: grid;
+  justify-content: start;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+    font-size: 12px;
+  }
+
+  &__items{
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 22px;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover{
+      background: $main-gr50;
+    }
+
+    &_current {
+      font-weight: 700;
+      color: #fff;
+      background: $main-gr100;
+      border-radius: 22px;
+    }
+
+    &_invisible {
+      cursor: default;
+      &:hover{
+        background: transparent;
+      }
+    }
+  }
+
+  &__btn {
+    display: none;
+    position: relative;
+    background: $secondary-gr100;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 22px;
+    color: #fff;
+
+    &:hover{
+      background: $secondary-gr75;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Material Icons';
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    &_visible {
+      display: block;
+    }
+
+    &_prev {
+      &::before {
+        content: '\e5c4';
+      }
+    }
+
+    &_next {
+      &::before {
+        content: '\e5c8';
+      }
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    color: $ds75;
+    text-align: center;
+  }
+}

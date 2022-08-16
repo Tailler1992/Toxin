@@ -1,0 +1,14 @@
+mixin radio(options = [])
+  .radio
+    each item in options
+      -
+        const {
+          name = "gender",
+          checked,
+          text
+        } = item
+
+      label.radio__label
+        input.radio__input(type="radio", name=name, checked=checked)
+        span.radio__checkmark
+        span.radio__text=text

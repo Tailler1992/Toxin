@@ -1,0 +1,66 @@
+include ../../primitives/logo/logo
+include ../../primitives/heading/heading
+include ../../primitives/text-field/text-field
+include ../../primitives/social/social
+
+mixin footer(options= {})
+
+  -
+    const {
+      descrLogo= `Бронирование номеров в лучшем отеле 2019
+        года по версии ассоциации «Отельные взгляды»`,
+      nav= [{
+        title: "навигация",
+        link: [
+          {linkHref: "#", linkText: "О нас"},
+          {linkHref: "#", linkText: "Новости"},
+          {linkHref:"#", linkText: "Служба поддержки"},
+          {linkHref:"#", linkText:"Услуги"}
+        ]}, {
+        title: "о нас",
+        link: [
+          {linkHref: "#", linkText: "О сервисе"},
+          {linkHref: "#", linkText: "Наша команда"},
+          {linkHref:"#", linkText: "Вакансии"},
+          {linkHref:"#", linkText:"Инвесторы"}
+        ]}, {
+        title: "Служба поддержки",
+        link: [
+          {linkHref: "#", linkText: "Соглашения"},
+          {linkHref: "#", linkText: "Сообщества"},
+          {linkHref:"#", linkText: "Связь с нами"}
+        ]},
+      ],
+      descrSubs="Получайте специальные предложения и новости сервиса",
+      copyText="Copyright © 2018 Toxin отель. Все права защищены.",
+      form={action: "", method: "POST"}
+    } = options;
+
+  footer.footer&attributes(attributes)
+    .footer__container
+      .footer__column
+        +logo(true).footer__logo
+        p.footer__description=descrLogo
+      nav.footer__nav
+        each item in nav
+          ul.footer__list
+            li.footer__item
+              +heading({title: item.title}).footer__title
+            each link in item.link
+              li.footer__item
+                a.footer__link(href=link.linkHref)=link.linkText
+      .footer__subscription
+        +heading({title: "Подписка"}).footer__subscription-title
+        p.footer__description=descrSubs
+        form.footer__form(action=form.action, method=form.method)
+          +text-field({
+            type: "email",
+            name: "subscription",
+            placeholder: "Email",
+            btnForward: true
+            })
+    .footer__line
+    .footer__container
+      .footer__copyright=copyText
+      .footer__social
+        +social()

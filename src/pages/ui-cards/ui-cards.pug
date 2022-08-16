@@ -1,0 +1,39 @@
+include ../../components/common.blocks/primitives/logo/logo
+include ../../components/common.blocks/cards/search-card/search-card
+include ../../components/common.blocks/cards/registration-card/registration-card
+include ../../components/common.blocks/cards/booking-card/booking-card
+include ../../components/common.blocks/cards/login-card/login-card
+include ../../components/common.blocks/cards/room-card/room-card
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title ui-cards
+  body
+    .ui-cards
+      .ui-cards__logo
+        +logo()
+      main.ui-cards__container
+        .ui-cards__column
+          +search-card().ui-cards__card
+          +registration-card()
+        .ui-cards__column
+          +booking-card().ui-cards__card
+          +login-card()
+        .ui-cards__column
+          .ui-cards__air
+          +room-card({
+            glide: {images: [888, 352, 444, 450], glideBtnActive: true},
+            roomInfo: {roomNumber: '888', roomType: 'люкс', roomPrice: '9 900'},
+            roomRating: 5,
+            totalReviews: 145
+          }).ui-cards__card
+          +room-card({
+            glide: {images: [840, 352, 444, 450]},
+            roomInfo: {roomNumber: '840', roomPrice: '9 900'},
+            roomRating: 4,
+            totalReviews: 65
+          })

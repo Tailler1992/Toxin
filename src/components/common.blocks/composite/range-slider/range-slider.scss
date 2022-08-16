@@ -1,0 +1,16 @@
+@import '../../../../scss/var-font';
+@import '../../../../scss/var-color';
+
+.range-slider {
+  max-width: 266px;
+
+  &__text {
+    margin-bottom: 23px;
+  }
+
+  &__description {
+    margin-top: 16px;
+    font-size: 12px;
+    color: $ds50;
+  }
+}

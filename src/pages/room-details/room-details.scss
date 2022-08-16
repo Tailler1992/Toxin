@@ -1,0 +1,128 @@
+@import '../../scss/_fonts';
+@import '../../scss/_nullstyle';
+@import '../../scss/_var-color';
+@import '../../scss/_var-font';
+
+html {
+  @include html;
+
+  background-color: #FFF;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.room-details {
+  flex: 1 0 auto;
+  border-bottom: 1px solid #e5e5e5;
+
+  &__gallery {
+    height: 485px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__first-fhoto {
+    width: 981px;
+    flex-grow: 1;
+  }
+
+  &__img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__fhoto-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__second-fhoto {
+    height: 50%;
+  }
+
+  &__third-fhoto {
+    height: 50%;
+  }
+
+
+  &__container {
+    max-width: 1198px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 70px 20px 73px;
+  }
+
+  &__info{
+    flex-grow: 1;
+    margin-right: 65px;
+  }
+
+  &__title {
+    @include h2;
+  }
+
+  &__information {
+    max-width: 280px;
+  }
+
+  &__info-block {
+    margin-bottom: 33px;
+  }
+
+  &__pie-chart{
+    margin-right: 42px;
+  }
+
+  &__pie-chart-block{
+    margin-top: 22px;
+  }
+
+  &__comments{
+    margin-bottom: 33px;
+    transform: translateX(-4px);
+  }
+
+  &__comment {
+    margin-top: 22px;
+    margin-bottom: 23px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__number-of-reviews{
+    align-self: flex-end;
+  }
+
+  &__rules {
+    max-width: 260px;
+  }
+
+  &__rule-title {
+    margin-bottom: 18px;
+    margin-left: 19px;
+  }
+
+  &__cancel {
+    max-width: 341px;
+    margin-right: 12px;
+
+    &-title {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__text {
+    line-height: 24px;
+  }
+}

@@ -1,9 +1,0 @@
-mixin slider(options)
-  .slider
-    +heading({
-      title: `${options.title}`,
-      descr: `${options.price}`
-    }).slider__text
-    #range-slider
-    if options.description
-      .slider__description=options.description

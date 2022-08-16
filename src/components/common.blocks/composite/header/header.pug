@@ -1,0 +1,41 @@
+include ../../primitives/logo/logo
+include ../../primitives/btn/btn
+
+mixin header(options={})
+
+  -
+    const {
+      nav= [
+        {linkText: "О нас", linkHref: "#", linkActive: true},
+        {linkText: "Услуги", linkHref: "#", linkArrow: true},
+        {linkText: "Вакансии", linkHref: "#"},
+        {linkText: "Новости", linkHref: "#"},
+        {linkText: "Соглашения", linkHref: "#", linkArrow: true},
+      ],
+      userName,
+      firstBtn= {typeBtn: "link", href: "#", title: "войти"},
+      secondBtn={typeBtn: "link", href: "#", title: "зарегистрироваться"}
+      } = options;
+
+  header.header&attributes(attributes)
+    .header__container
+      +logo(true)
+
+      .header__right
+        nav.header__nav
+          ul.header__list
+            each item in nav
+              - const active = item.linkActive ? "header__link_active" : ""
+              - const arrow = item.linkArrow ? "header__link_arrow" : ""
+
+              li.header__item
+                a.header__link(href=item.linkHref class=`${active} ${arrow}`)=item.linkText
+        if userName
+          .header__login
+            p.header__user-name=userName
+        else
+          .header__btns
+            +btn(firstBtn).btn_theme-hollow.header__btn-enter
+            +btn(secondBtn).header__btn-registration
+      .header__burger
+        span.header__burger-ico.material-icons menu

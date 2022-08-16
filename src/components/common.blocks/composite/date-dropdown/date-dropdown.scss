@@ -1,0 +1,40 @@
+@import '../../../../scss/var-font';
+@import '../../../../scss/var-color';
+
+.date-dropdown {
+
+  &__inputs {
+    display: flex;
+  }
+
+  &__column {
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__datepicker {
+    position: relative;
+    width: 100%;
+  }
+
+  &__input-alt {
+    cursor: pointer;
+
+    & ~ .material-icons {
+      pointer-events: none;
+    }
+
+    &:hover ~ .material-icons {
+      color: $ds75;
+    }
+
+    &:focus ~ .material-icons {
+      color: $ds75;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import '../../../../scss/var-font';
+@import '../../../../scss/var-color';
+
+.rating {
+  font-size: 24px;
+  font-family: 'Material Icons';
+
+  &__body {
+    position: relative;
+
+    &::before {
+      content: '\e83a\e83a\e83a\e83a\e83a';
+      display: block;
+      background: $main-gr100;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+
+  &__active {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    &::before {
+      content: '\e838\e838\e838\e838\e838';
+      display: block;
+      background: $main-gr100;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+
+  &__stars {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__star {
+    flex: 0 0 20%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__value {
+    display: none;
+  }
+}

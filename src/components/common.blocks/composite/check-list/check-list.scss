@@ -1,0 +1,40 @@
+@import '../../../../scss/var-font';
+@import '../../../../scss/var-color';
+
+.check-list {
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 266px;
+    margin-bottom: 3px;
+  }
+
+  &__btn {
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+    color: $ds50;
+    cursor: pointer;
+    user-select: none;
+    background: none;
+    border: none;
+
+    &_active {
+      transform: rotate(180deg);
+    }
+
+    &:hover {
+      color: $ds75;
+    }
+  }
+
+  &__blind {
+    display: none;
+
+    &_active {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+@import '../../../../scss/var-font';
+@import '../../../../scss/var-color';
+
+.header {
+  background-color: #fff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+  &__container {
+    max-width: 1198px;
+    min-height: 70px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 20px;
+  }
+
+  &__link {
+    position: relative;
+    color: $ds50;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &_active {
+      font-weight: 700;
+      color: $ds75;
+    }
+
+    &_arrow {
+      padding-right: 26px;
+
+      &::before {
+        content: '\e5cf';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        font-family: 'Material Icons';
+        font-size: 24px;
+        font-weight: 400;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__login {
+    height: 30px;
+    padding-left: 19px;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid $ds10;
+  }
+
+  &__btn-enter {
+    margin-right: 20px;
+    padding: 9px 18px;
+  }
+
+  &__btn-registration {
+    padding: 11px 19px;
+  }
+
+  &__burger {
+    display: none;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__burger-ico {
+    color: $purple;
+    font-size: 36px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .header {
+    &__nav {
+      display: none;
+    }
+
+    &__right {
+      display: none;
+    }
+
+    &__burger {
+      display: block;
+    }
+  }
+}

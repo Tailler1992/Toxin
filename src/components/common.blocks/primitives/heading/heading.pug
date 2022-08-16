@@ -1,0 +1,8 @@
+mixin heading(options = {})
+
+  - const {title, description} = options
+
+  .heading&attributes(attributes)
+    h3.heading__title=title
+    if description
+      .heading__description=description

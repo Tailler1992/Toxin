@@ -1,0 +1,14 @@
+mixin checkbox(options = [])
+  each item in options
+
+    - const {checked, text, title, description} = item
+
+    .checkbox
+      label.checkbox__label
+        input.checkbox__input(type="checkbox", checked=checked)
+        span.checkbox__checkmark
+        span.checkbox__text(
+          class=description ? "checkbox__text_bold" : ""
+        )!=text
+      if description
+        .checkbox__description!= description

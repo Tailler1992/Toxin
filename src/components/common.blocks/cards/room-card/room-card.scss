@@ -1,0 +1,42 @@
+@import '../../../../scss/var-font';
+@import '../../../../scss/var-color';
+
+.room-card {
+  width: 270px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+
+
+  &__container {
+    padding: 19px 19px 20px;
+  }
+
+  &__info {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $ds10;
+    margin-bottom: 8px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__row {
+    display: flex;
+    font-size: 14px;
+    color: $ds50;
+  }
+
+  &__total-reviews {
+    margin-right: 3px;
+    font-weight: 700;
+  }
+
+  &__text {
+    color: $ds50;
+  }
+}

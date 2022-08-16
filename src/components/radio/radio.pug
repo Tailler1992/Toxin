@@ -1,7 +1,0 @@
-mixin radio(content)
-  .radio
-    each item in content
-      label.radio__label
-        input.radio__input(type="radio" name="gender", checked=item.checked)
-        .radio__checkmark
-        .radio__text=item.text

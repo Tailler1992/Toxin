@@ -1,0 +1,49 @@
+@import '../../../../scss/var-font';
+@import '../../../../scss/var-color';
+
+.room-info {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  &__column {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__symbol {
+    font-weight: 700;
+    color: $ds100;
+    margin-right: 4px;
+  }
+
+  &__number {
+    @include h2;
+
+    margin-right: 8px;
+
+    &_big {
+      @include h1;
+    }
+  }
+
+  &__type {
+    font-weight: 700;
+    font-size: 12px;
+    color: $purple;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: $ds50;
+  }
+
+  &__term {
+    font-size: 12px;
+    color: $ds50;
+  }
+}

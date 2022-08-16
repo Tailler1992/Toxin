@@ -1,0 +1,10 @@
+mixin logo(color=false)
+
+  - const logo = color ? "logo" : "logo-gray"
+
+  .logo&attributes(attributes)
+    img.logo__img(
+      src=require(`../../components/common.blocks/primitives/logo/${logo}.svg`),
+      alt=`${logo}`,
+      class=color ? "logo__img_purple" : ""
+    )

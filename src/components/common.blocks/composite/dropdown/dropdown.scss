@@ -1,0 +1,86 @@
+@import '../../../../scss/var-font';
+@import '../../../../scss/var-color';
+
+.dropdown {
+  position: relative;
+  width: 100%;
+
+  &__input {
+    cursor: pointer;
+
+    & ~ .material-icons {
+      pointer-events: none;
+    }
+
+    &:hover ~ .material-icons {
+      color: $ds75;
+    }
+
+    &:focus ~ .material-icons {
+      color: $ds75;
+    }
+  }
+
+  &__blind {
+    position: absolute;
+    display: none;
+    width: 100%;
+    padding: 4px 7px 7px 15px;
+    background-color: #FFF;
+    border: 1px solid $ds50;
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 10px 20px $ds5;
+
+    &_active {
+      z-index: 5;
+      display: block;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 92px;
+  }
+
+  &__btn {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    color: $ds50;
+    background-color: #FFF;
+    border: 1px solid $ds25;
+    border-radius: 22px;
+
+    &_disabled {
+      opacity: 0.4;
+    }
+  }
+
+  &__count {
+    min-width: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: $ds100;
+  }
+
+  &__text-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 21px;
+    margin-bottom: 6px;
+  }
+}
